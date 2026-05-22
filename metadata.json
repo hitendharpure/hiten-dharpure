@@ -1,0 +1,8 @@
+{
+  "name": "Hiten Dharpure Portfolio",
+  "description": "A high-end, professional Dark Theme portfolio with a Split-Screen Hero and Bento Grid.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@theme {
+  --color-wonder-green: #5DF878;
+  --color-wonder-blue: #285E78;
+  --color-lotus-pink: #FF5E97;
+}
+
+body {
+  background-color: #020617; /* bg-slate-950 */
+  color: #f3f4f6; /* text-gray-100 */
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+}
