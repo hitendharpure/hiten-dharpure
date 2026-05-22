@@ -22,7 +22,7 @@ export default function Hero() {
         <div className="absolute bottom-8 right-8 w-64 h-64 bg-wonder-green/10 blur-[80px] rounded-full"></div>
         <div className="flex items-center justify-center h-full relative z-10 w-full p-6">
           <div className="w-full max-w-[290px] aspect-[3/4] bg-slate-800 border-2 border-slate-700 rounded-2xl overflow-hidden flex items-center justify-center mx-auto shadow-2xl relative group">
-            <img src="/image.JPG" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Hiten Dharpure" fetchPriority="high" loading="eager" />
+            <img src="./image.JPG" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Hiten Dharpure" fetchPriority="high" loading="eager" />
           </div>
         </div>
       </div>
