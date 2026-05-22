@@ -60,7 +60,7 @@ export default function MakerPage() {
           <div className="w-full aspect-[3/4] rounded-xl overflow-hidden border border-slate-800 shadow-lg relative bg-slate-950">
             <img 
               src={imgSrc} 
-              onError={() => setImgSrc('/image.JPG')} 
+              onError={() => setImgSrc('./image.JPG')} 
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
               alt="Hiten Dharpure" 
             />
