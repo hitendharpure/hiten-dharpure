@@ -142,16 +142,16 @@ export default function BentoGrid() {
 
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mt-4 w-full">
             <div className="aspect-[9/16] w-full rounded-xl overflow-hidden">
-              <MediaPlaceholder type="photo" src="/app-1.png" label="HastaVaani UI Image 1" className="w-full h-full" />
+              <MediaPlaceholder type="photo" src="./app-1.png" label="HastaVaani UI Image 1" className="w-full h-full" />
             </div>
             <div className="aspect-[9/16] w-full rounded-xl overflow-hidden">
-              <MediaPlaceholder type="photo" src="/app-2.png" label="HastaVaani UI Image 2" className="w-full h-full" />
+              <MediaPlaceholder type="photo" src="./app-2.png" label="HastaVaani UI Image 2" className="w-full h-full" />
             </div>
             <div className="aspect-[9/16] w-full rounded-xl overflow-hidden">
-              <MediaPlaceholder type="photo" src="/app-3.png" label="HastaVaani UI Image 3" className="w-full h-full" />
+              <MediaPlaceholder type="photo" src="./app-3.png" label="HastaVaani UI Image 3" className="w-full h-full" />
             </div>
             <div className="aspect-[9/16] w-full rounded-xl overflow-hidden">
-              <MediaPlaceholder type="video" src="/appdemo.mp4" label="HastaVaani Demo" className="bg-wonder-green/5 border-wonder-green/20 text-wonder-green w-full h-full" />
+              <MediaPlaceholder type="video" src="./appdemo.mp4" label="HastaVaani Demo" className="bg-wonder-green/5 border-wonder-green/20 text-wonder-green w-full h-full" />
             </div>
           </div>
         </motion.div>
@@ -173,10 +173,10 @@ export default function BentoGrid() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full mt-4">
             <div className="aspect-video w-full rounded-xl overflow-hidden">
-              <MediaPlaceholder type="video" src="/robotdance.mp4" label="Robot Synchronized Dance" className="w-full h-full" />
+              <MediaPlaceholder type="video" src="./robotdance.mp4" label="Robot Synchronized Dance" className="w-full h-full" />
             </div>
             <div className="aspect-video w-full rounded-xl overflow-hidden">
-              <MediaPlaceholder type="photo" src="/worldrecord.png" label="World Record Certificate" className="w-full h-full" />
+              <MediaPlaceholder type="photo" src="./worldrecord.png" label="World Record Certificate" className="w-full h-full" />
             </div>
           </div>
         </motion.div>
@@ -200,10 +200,10 @@ export default function BentoGrid() {
             {/* Top row: GPAI-1 and GPAI-2 side-by-side, equal width */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full">
               <div className="aspect-video w-full rounded-xl overflow-hidden">
-                <MediaPlaceholder type="photo" src="/gpai-1.jpg" label="GPAI Image 1" className="w-full h-full" />
+                <MediaPlaceholder type="photo" src="./gpai-1.jpg" label="GPAI Image 1" className="w-full h-full" />
               </div>
               <div className="aspect-video w-full rounded-xl overflow-hidden">
-                <MediaPlaceholder type="photo" src="/gpai-2.JPG" label="GPAI Image 2" className="w-full h-full" />
+                <MediaPlaceholder type="photo" src="./gpai-2.JPG" label="GPAI Image 2" className="w-full h-full" />
               </div>
             </div>
 
@@ -211,15 +211,15 @@ export default function BentoGrid() {
             <div className="flex flex-col sm:flex-row gap-3 w-full">
               <div className="w-full sm:w-[40%] flex flex-col">
                 <div className="aspect-[9/16] w-full rounded-xl overflow-hidden">
-                  <MediaPlaceholder type="photo" src="/gpai-3.jpg" label="GPAI Image 3" className="w-full h-full" />
+                  <MediaPlaceholder type="photo" src="./gpai-3.jpg" label="GPAI Image 3" className="w-full h-full" />
                 </div>
               </div>
               <div className="w-full sm:w-[60%] flex flex-col gap-3 justify-between">
                 <div className="aspect-video w-full rounded-xl overflow-hidden">
-                  <MediaPlaceholder type="photo" src="/gpai-4.JPG" label="GPAI Image 4" className="w-full h-full" />
+                  <MediaPlaceholder type="photo" src="./gpai-4.JPG" label="GPAI Image 4" className="w-full h-full" />
                 </div>
                 <div className="aspect-video w-full rounded-xl overflow-hidden">
-                  <MediaPlaceholder type="photo" src="/gpai-5.JPG" label="GPAI Image 5" className="w-full h-full" />
+                  <MediaPlaceholder type="photo" src="./gpai-5.JPG" label="GPAI Image 5" className="w-full h-full" />
                 </div>
               </div>
             </div>
@@ -245,10 +245,10 @@ export default function BentoGrid() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4 pt-4 border-t border-slate-800/50 w-full">
             <div className="aspect-video w-full rounded-xl overflow-hidden">
-              <MediaPlaceholder type="photo" src="/ibr-1.jpg" label="Hiten Holding India Book of Records Certificate" className="w-full h-full" />
+              <MediaPlaceholder type="photo" src="./ibr-1.jpg" label="Hiten Holding India Book of Records Certificate" className="w-full h-full" />
             </div>
             <div className="aspect-video w-full rounded-xl overflow-hidden">
-              <MediaPlaceholder type="photo" src="/ibr-2.jpg" label="Hiten's Felicitation" className="w-full h-full" />
+              <MediaPlaceholder type="photo" src="./ibr-2.jpg" label="Hiten's Felicitation" className="w-full h-full" />
             </div>
           </div>
         </motion.div>
