@@ -325,7 +325,7 @@ export default function BentoGrid({ onViewChange }: BentoGridProps) {
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-slate-950/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-2 pointer-events-none">
-                <span className="text-white text-[9px] font-semibold tracking-wider uppercase bg-slate-950/80 px-1.5 py-0.5 rounded border border-slate-800">Stage Award Function</span>
+                <span className="text-white text-[9px] font-semibold tracking-wider uppercase bg-slate-950/80 px-1.5 py-0.5 rounded border border-slate-800">Felicitation on Stage</span>
               </div>
             </div>
             <div className="aspect-[3/4] w-[210px] sm:w-auto sm:h-full rounded-xl overflow-hidden border border-slate-800/80 bg-slate-950/20 group relative shrink-0">
