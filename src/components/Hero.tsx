@@ -12,7 +12,7 @@ export default function Hero() {
           </p>
         </div>
         <p className="text-gray-400 text-sm max-w-sm mt-2 md:mt-0 leading-relaxed">
-          By specializing in robotics and AI, I bridge the gap between code and physical hardware, creating record-breaking solutions like the world's smallest AI weather station and the HastaVaani sign language app. Driven by 800+ STEM certifications and a passion for precision, I turn complex engineering challenges into impactful, real-world tools.
+          By specializing in robotics and AI, I bridge the gap between code and physical hardware, creating record-breaking solutions like the world's smallest AI weather station, smallest robot arm and the HastaVaani sign language app. Driven by 800+ STEM certifications and a passion for precision, I turn complex engineering challenges into impactful, real-world tools.
         </p>
       </div>
 

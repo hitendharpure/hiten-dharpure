@@ -62,7 +62,51 @@ export default function BentoGrid({ onViewChange }: BentoGridProps) {
           </div>
         </motion.div>
 
-        {/* World Record */}
+        {/* World Record 2026 */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: "easeOut", delay: 0.15 }}
+          className="w-full bg-slate-900/40 backdrop-blur-md border border-slate-800/65 rounded-2xl p-5 flex flex-col gap-2 hover:scale-[1.02] hover:shadow-2xl transition-all relative overflow-hidden"
+        >
+          <div className="flex justify-between items-start z-10 flex-col sm:flex-row gap-2 sm:gap-0">
+            <div className="space-y-1">
+              <h3 className="text-xs font-bold uppercase tracking-widest text-wonder-green">Guinness World Record</h3>
+              <p className="text-2xl font-bold text-gray-100">Smallest Robot Arm</p>
+            </div>
+            <div className="flex flex-row sm:flex-col items-center sm:items-end gap-2 shrink-0">
+              <span className="text-xs bg-wonder-green/10 text-wonder-green px-2 py-1 rounded border border-wonder-green/30 font-bold shrink-0">2026</span>
+            </div>
+          </div>
+          <p className="text-sm text-gray-300 mt-1 leading-relaxed">
+            Ultra-miniaturized, high-precision, and fully functional. A record-breaking 39.25 mm mechanical marvel exploring the absolute limits of micro-robotics.
+          </p>
+
+
+          <div className="flex flex-col sm:flex-row gap-4 mt-4 w-full">
+            {/* Column 1: Main Image */}
+            <div className="flex flex-col gap-4 w-full sm:w-1/2">
+              <div className="aspect-[4/5] w-full rounded-xl overflow-hidden">
+                <MediaPlaceholder type="photo" src="./gwr-sra-1.jpg" label="Hiten Holding his Certificate" className="w-full h-full" />
+              </div>
+              <div className="aspect-[1206/664] w-full rounded-xl overflow-hidden">
+                <MediaPlaceholder type="photo" src="./gwr-sra-4.jpg" label="Smallest robot arm Model" className="w-full h-full" />
+              </div>
+            </div>
+
+            {/* Column 2: Other Images */}
+            <div className="flex flex-col gap-4 w-full sm:w-1/2">
+              <div className="aspect-[3/4] w-full rounded-xl overflow-hidden">
+                <MediaPlaceholder type="photo" src="./gwr-sra-2.jpg" label="Hiten Holding his Certificate and his dummy Arm model" className="w-full h-full" />
+              </div>
+              <div className="aspect-[3/4] w-full rounded-xl overflow-hidden">
+                <MediaPlaceholder type="photo" src="./gwr-sra-3.jpg" label="Hiten in his school uniform" className="w-full h-full" />
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* World Record 2025 */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
