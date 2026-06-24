@@ -7,14 +7,14 @@ interface RobotJourneyPageProps {
 
 export default function RobotJourneyPage({ onBack }: RobotJourneyPageProps) {
   const mediaItems = [
-    { type: 'video', src: './wr2024-1.MP4', label: 'Step 1: Assembling', aspect: 'aspect-[9/16]' },
-    { type: 'video', src: './wr2024-2.mp4', label: 'Step 2: PCB & Microcontroller Wiring', aspect: 'aspect-[9/16]' },
-    { type: 'image', src: './wr2024-3.jpg', label: 'Step 3: Backview', aspect: 'aspect-[4/5]' },
-    { type: 'image', src: './wr2024-4.jpg', label: 'Step 4: While Charging', aspect: 'aspect-[4/5]' },
-    { type: 'image', src: './wr2024-5.jpg', label: 'Step 5: Fully Charged', aspect: 'aspect-square' },
-    { type: 'image', src: './wr2024-6.jpg', label: 'Step 6: In Short Glimpes', aspect: 'aspect-square' },
-    { type: 'image', src: './wr2024-7.jpg', label: 'Step 7: Components and Motors', aspect: 'aspect-[4/5]' },
-    { type: 'image', src: './wr2024-8.jpg', label: 'Step 8: 3D Printing', aspect: 'aspect-[4/5]' },
+    { type: 'video', src: './Worldwide Book of Records/journey/wr2024-1.MP4', label: 'Step 1: Assembling', aspect: 'aspect-[9/16]' },
+    { type: 'video', src: './Worldwide Book of Records/journey/wr2024-2.mp4', label: 'Step 2: PCB & Microcontroller Wiring', aspect: 'aspect-[9/16]' },
+    { type: 'image', src: './Worldwide Book of Records/journey/wr2024-3.jpg', label: 'Step 3: Backview', aspect: 'aspect-[4/5]' },
+    { type: 'image', src: './Worldwide Book of Records/journey/wr2024-4.jpg', label: 'Step 4: While Charging', aspect: 'aspect-[4/5]' },
+    { type: 'image', src: './Worldwide Book of Records/journey/wr2024-5.jpg', label: 'Step 5: Fully Charged', aspect: 'aspect-square' },
+    { type: 'image', src: './Worldwide Book of Records/journey/wr2024-6.jpg', label: 'Step 6: In Short Glimpes', aspect: 'aspect-square' },
+    { type: 'image', src: './Worldwide Book of Records/journey/wr2024-7.jpg', label: 'Step 7: Components and Motors', aspect: 'aspect-[4/5]' },
+    { type: 'image', src: './Worldwide Book of Records/journey/wr2024-8.jpg', label: 'Step 8: 3D Printing', aspect: 'aspect-[4/5]' },
   ];
 
   return (

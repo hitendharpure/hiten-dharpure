@@ -7,12 +7,12 @@ interface WeatherJourneyPageProps {
 
 export default function WeatherJourneyPage({ onBack }: WeatherJourneyPageProps) {
   const mediaItems = [
-    { type: 'video', src: './gwrj-1.mp4', label: 'Step 1: Circuit Integration' },
-    { type: 'video', src: './gwrj-2.mp4', label: 'Step 2: Coding' },
-    { type: 'video', src: './gwrj-3.mp4', label: 'Step 3: 3D CAD Designing' },
-    { type: 'video', src: './gwrj-4.mp4', label: 'Step 4: 3D Printing' },
-    { type: 'video', src: './gwrj-5.mp4', label: 'Step 5: Assembling' },
-    { type: 'image', src: './gwrj-6.jpg', label: 'Step 6: Final Check' },
+    { type: 'video', src: './1st-gwr/journey/gwrj-1.mp4', label: 'Step 1: Circuit Integration' },
+    { type: 'video', src: './1st-gwr/journey/gwrj-2.mp4', label: 'Step 2: Coding' },
+    { type: 'video', src: './1st-gwr/journey/gwrj-3.mp4', label: 'Step 3: 3D CAD Designing' },
+    { type: 'video', src: './1st-gwr/journey/gwrj-4.mp4', label: 'Step 4: 3D Printing' },
+    { type: 'video', src: './1st-gwr/journey/gwrj-5.mp4', label: 'Step 5: Assembling' },
+    { type: 'image', src: './1st-gwr/journey/gwrj-6.jpg', label: 'Step 6: Final Check' },
   ];
 
   return (

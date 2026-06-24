@@ -87,20 +87,20 @@ export default function BentoGrid({ onViewChange }: BentoGridProps) {
             {/* Column 1: Main Image */}
             <div className="flex flex-col gap-4 w-full sm:w-1/2">
               <div className="aspect-[4/5] w-full rounded-xl overflow-hidden">
-                <MediaPlaceholder type="photo" src="./gwr-sra-1.jpg" label="Hiten Holding his Certificate" className="w-full h-full" />
+                <MediaPlaceholder type="photo" src="./2nd-gwr-sra/1.jpg" label="Hiten Holding his Certificate" className="w-full h-full" />
               </div>
               <div className="aspect-[1206/664] w-full rounded-xl overflow-hidden">
-                <MediaPlaceholder type="photo" src="./gwr-sra-4.jpg" label="Smallest robot arm Model" className="w-full h-full" />
+                <MediaPlaceholder type="photo" src="./2nd-gwr-sra/4.jpg" label="Smallest robot arm Model" className="w-full h-full" />
               </div>
             </div>
 
             {/* Column 2: Other Images */}
             <div className="flex flex-col gap-4 w-full sm:w-1/2">
               <div className="aspect-[3/4] w-full rounded-xl overflow-hidden">
-                <MediaPlaceholder type="photo" src="./gwr-sra-2.jpg" label="Hiten Holding his Certificate and his dummy Arm model" className="w-full h-full" />
+                <MediaPlaceholder type="photo" src="./2nd-gwr-sra/2.jpg" label="Hiten Holding his Certificate and his dummy Arm model" className="w-full h-full" />
               </div>
               <div className="aspect-[3/4] w-full rounded-xl overflow-hidden">
-                <MediaPlaceholder type="photo" src="./gwr-sra-3.jpg" label="Hiten in his school uniform" className="w-full h-full" />
+                <MediaPlaceholder type="photo" src="./2nd-gwr-sra/3.jpg" label="Hiten in his school uniform" className="w-full h-full" />
               </div>
             </div>
           </div>
@@ -135,25 +135,25 @@ export default function BentoGrid({ onViewChange }: BentoGridProps) {
             {/* Column 1: Prototype & Demo */}
             <div className="flex flex-col gap-4 w-full sm:w-1/2">
               <div className="aspect-[4/5] w-full rounded-xl overflow-hidden">
-                <MediaPlaceholder type="photo" src="./weather-1.jpg" label="Hiten holding his certificate and Weather Station" className="w-full h-full" />
+                <MediaPlaceholder type="photo" src="./1st-gwr/weather-1.jpg" label="Hiten holding his certificate and Weather Station" className="w-full h-full" />
               </div>
               <div className="aspect-video w-full rounded-xl overflow-hidden">
-                <MediaPlaceholder type="video" src="./weather-3.mp4" label="Weather Station Closeup" className="bg-slate-800/50 border-wonder-green/20 w-full h-full" />
+                <MediaPlaceholder type="video" src="./1st-gwr/weather-3.mp4" label="Weather Station Closeup" className="bg-slate-800/50 border-wonder-green/20 w-full h-full" />
               </div>
               <div className="aspect-[4/3] w-full rounded-xl overflow-hidden">
-                <MediaPlaceholder type="photo" src="./weather-4.JPG" label="Close Up View" className="w-full h-full" />
+                <MediaPlaceholder type="photo" src="./1st-gwr/weather-4.JPG" label="Close Up View" className="w-full h-full" />
               </div>
             </div>
 
             {/* Column 2: Closeup & Copyright */}
             <div className="flex flex-col gap-4 w-full sm:w-1/2">
               <div className="aspect-[5/4] w-full rounded-xl overflow-hidden">
-                <MediaPlaceholder type="photo" src="./weather-2.jpg" label="Hiten's Felicitation" className="w-full h-full" />
+                <MediaPlaceholder type="photo" src="./1st-gwr/weather-2.jpg" label="Hiten's Felicitation" className="w-full h-full" />
               </div>
               <div className="flex flex-col gap-2 w-full">
                 <p className="text-xs text-gray-400 font-medium leading-relaxed">Copyright of Code: Firmware of AI-powered Weather Station</p>
                 <div className="aspect-[9/16] w-full rounded-xl overflow-hidden">
-                  <MediaPlaceholder type="photo" src="./copyright.png" label="Copyright Certificate" className="w-full h-full" />
+                  <MediaPlaceholder type="photo" src="./1st-gwr/copyright.png" label="Copyright Certificate" className="w-full h-full" />
                 </div>
               </div>
             </div>
@@ -185,7 +185,7 @@ export default function BentoGrid({ onViewChange }: BentoGridProps) {
                 <span className="text-xs bg-wonder-green/10 text-wonder-green px-2 py-1 rounded border border-wonder-green/30 font-bold">2025</span>
               </div>
               <a
-                href="./hastavaanireport.pdf"
+                href="./HastaVaani/hastavaanireport.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-xs font-bold px-3 py-1 rounded bg-wonder-green/20 text-wonder-green hover:bg-wonder-green/30 border border-wonder-green/30 transition-colors cursor-pointer"
@@ -208,16 +208,16 @@ export default function BentoGrid({ onViewChange }: BentoGridProps) {
 
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mt-4 w-full">
             <div className="aspect-[9/16] w-full rounded-xl overflow-hidden">
-              <MediaPlaceholder type="photo" src="./app-1.png" label="HastaVaani UI Image 1" className="w-full h-full" />
+              <MediaPlaceholder type="photo" src="./HastaVaani/app-1.png" label="HastaVaani UI Image 1" className="w-full h-full" />
             </div>
             <div className="aspect-[9/16] w-full rounded-xl overflow-hidden">
-              <MediaPlaceholder type="photo" src="./app-2.png" label="HastaVaani UI Image 2" className="w-full h-full" />
+              <MediaPlaceholder type="photo" src="./HastaVaani/app-2.png" label="HastaVaani UI Image 2" className="w-full h-full" />
             </div>
             <div className="aspect-[9/16] w-full rounded-xl overflow-hidden">
-              <MediaPlaceholder type="photo" src="./app-3.png" label="HastaVaani UI Image 3" className="w-full h-full" />
+              <MediaPlaceholder type="photo" src="./HastaVaani/app-3.png" label="HastaVaani UI Image 3" className="w-full h-full" />
             </div>
             <div className="aspect-[9/16] w-full rounded-xl overflow-hidden">
-              <MediaPlaceholder type="video" src="./appdemo.mp4" label="HastaVaani Demo" className="bg-wonder-green/5 border-wonder-green/20 text-wonder-green w-full h-full" />
+              <MediaPlaceholder type="video" src="./HastaVaani/appdemo.mp4" label="HastaVaani Demo" className="bg-wonder-green/5 border-wonder-green/20 text-wonder-green w-full h-full" />
             </div>
           </div>
         </motion.div>
@@ -247,10 +247,10 @@ export default function BentoGrid({ onViewChange }: BentoGridProps) {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full mt-4">
             <div className="aspect-video w-full rounded-xl overflow-hidden">
-              <MediaPlaceholder type="video" src="./robotdance.mp4" label="Robot Synchronized Dance" className="w-full h-full" />
+              <MediaPlaceholder type="video" src="./Worldwide Book of Records/robotdance.mp4" label="Robot Synchronized Dance" className="w-full h-full" />
             </div>
             <div className="aspect-video w-full rounded-xl overflow-hidden">
-              <MediaPlaceholder type="photo" src="./worldrecord.png" label="World Record Certificate" className="w-full h-full" />
+              <MediaPlaceholder type="photo" src="./Worldwide Book of Records/worldrecord.png" label="World Record Certificate" className="w-full h-full" />
             </div>
           </div>
         </motion.div>
@@ -274,10 +274,10 @@ export default function BentoGrid({ onViewChange }: BentoGridProps) {
             {/* Top row: GPAI-1 and GPAI-2 side-by-side, equal width */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full">
               <div className="aspect-video w-full rounded-xl overflow-hidden">
-                <MediaPlaceholder type="photo" src="./gpai-1.jpg" label="GPAI Image 1" className="w-full h-full" />
+                <MediaPlaceholder type="photo" src="./gpai/gpai-1.jpg" label="GPAI Image 1" className="w-full h-full" />
               </div>
               <div className="aspect-video w-full rounded-xl overflow-hidden">
-                <MediaPlaceholder type="photo" src="./gpai-2.JPG" label="GPAI Image 2" className="w-full h-full" />
+                <MediaPlaceholder type="photo" src="./gpai/gpai-2.JPG" label="GPAI Image 2" className="w-full h-full" />
               </div>
             </div>
 
@@ -285,15 +285,15 @@ export default function BentoGrid({ onViewChange }: BentoGridProps) {
             <div className="flex flex-col sm:flex-row gap-3 w-full">
               <div className="w-full sm:w-[40%] flex flex-col">
                 <div className="aspect-[9/16] w-full rounded-xl overflow-hidden">
-                  <MediaPlaceholder type="photo" src="./gpai-3.jpg" label="GPAI Image 3" className="w-full h-full" />
+                  <MediaPlaceholder type="photo" src="./gpai/gpai-3.jpg" label="GPAI Image 3" className="w-full h-full" />
                 </div>
               </div>
               <div className="w-full sm:w-[60%] flex flex-col gap-3 justify-between">
                 <div className="aspect-video w-full rounded-xl overflow-hidden">
-                  <MediaPlaceholder type="photo" src="./gpai-4.JPG" label="GPAI Image 4" className="w-full h-full" />
+                  <MediaPlaceholder type="photo" src="./gpai/gpai-4.JPG" label="GPAI Image 4" className="w-full h-full" />
                 </div>
                 <div className="aspect-video w-full rounded-xl overflow-hidden">
-                  <MediaPlaceholder type="photo" src="./gpai-5.JPG" label="GPAI Image 5" className="w-full h-full" />
+                  <MediaPlaceholder type="photo" src="./gpai/gpai-5.JPG" label="GPAI Image 5" className="w-full h-full" />
                 </div>
               </div>
             </div>
@@ -319,10 +319,10 @@ export default function BentoGrid({ onViewChange }: BentoGridProps) {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4 pt-4 border-t border-slate-800/50 w-full">
             <div className="aspect-video w-full rounded-xl overflow-hidden">
-              <MediaPlaceholder type="photo" src="./ibr-1.jpg" label="Hiten Holding India Book of Records Certificate" className="w-full h-full" />
+              <MediaPlaceholder type="photo" src="./ibr/ibr-1.jpg" label="Hiten Holding India Book of Records Certificate" className="w-full h-full" />
             </div>
             <div className="aspect-video w-full rounded-xl overflow-hidden">
-              <MediaPlaceholder type="photo" src="./ibr-2.jpg" label="Hiten's Felicitation" className="w-full h-full" />
+              <MediaPlaceholder type="photo" src="./ibr/ibr-2.jpg" label="Hiten's Felicitation" className="w-full h-full" />
             </div>
           </div>
         </motion.div>
@@ -363,7 +363,7 @@ export default function BentoGrid({ onViewChange }: BentoGridProps) {
           <div className="flex flex-col sm:flex-row gap-4 w-full h-auto sm:h-[240px] justify-center items-center">
             <div className="aspect-video w-full max-w-[320px] sm:max-w-none sm:w-auto sm:h-full rounded-xl overflow-hidden border border-slate-800/80 bg-slate-950/20 group relative shrink-0">
               <img
-                src="./jig2024-1.jpg"
+                src="./jig2024/jig2024-1.jpg"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 alt="Jigyasa Science Quiz Award Presentation"
                 loading="lazy"
@@ -374,7 +374,7 @@ export default function BentoGrid({ onViewChange }: BentoGridProps) {
             </div>
             <div className="aspect-[3/4] w-[210px] sm:w-auto sm:h-full rounded-xl overflow-hidden border border-slate-800/80 bg-slate-950/20 group relative shrink-0">
               <img
-                src="./jig2024-2.jpg"
+                src="./jig2024/jig2024-2.jpg"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 alt="Jigyasa Science Quiz Hiten holding certificate"
                 loading="lazy"
