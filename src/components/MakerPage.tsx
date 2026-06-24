@@ -97,7 +97,7 @@ export default function MakerPage() {
             <div className="w-full aspect-[3/4] rounded-xl overflow-hidden border border-slate-800 shadow-lg relative bg-slate-950">
               <img
                 src={imgSrc}
-                onError={() => setImgSrc('./krishna-hiten.jpg')}
+                onError={() => setImgSrc('./hiten-dharpure.jpg')}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 alt="Hiten Dharpure"
               />
