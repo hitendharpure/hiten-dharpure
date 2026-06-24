@@ -27,7 +27,7 @@ const MediaPlaceholder = ({ type = 'photo', className = '', label = 'MEDIA', src
 );
 
 interface BentoGridProps {
-  onViewChange: (view: 'home' | 'maker' | 'weather-journey' | 'robot-journey') => void;
+  onViewChange: (view: 'home' | 'maker' | 'weather-journey' | 'robot-journey' | 'robot-arm-journey') => void;
 }
 
 export default function BentoGrid({ onViewChange }: BentoGridProps) {
@@ -76,6 +76,12 @@ export default function BentoGrid({ onViewChange }: BentoGridProps) {
             </div>
             <div className="flex flex-row sm:flex-col items-center sm:items-end gap-2 shrink-0">
               <span className="text-xs bg-wonder-green/10 text-wonder-green px-2 py-1 rounded border border-wonder-green/30 font-bold shrink-0">2026</span>
+              <button
+                onClick={() => onViewChange('robot-arm-journey')}
+                className="text-xs font-bold px-3 py-1 rounded bg-wonder-green/20 text-wonder-green hover:bg-wonder-green/30 border border-wonder-green/30 transition-colors flex items-center gap-1 cursor-pointer"
+              >
+                Journey ➔
+              </button>
             </div>
           </div>
           <p className="text-sm text-gray-300 mt-1 leading-relaxed">

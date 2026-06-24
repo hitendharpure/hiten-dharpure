@@ -10,9 +10,10 @@ import BentoGrid from './components/BentoGrid';
 import MakerPage from './components/MakerPage';
 import WeatherJourneyPage from './components/WeatherJourneyPage';
 import RobotJourneyPage from './components/RobotJourneyPage';
+import RobotArmJourneyPage from './components/RobotArmJourneyPage';
 
 export default function App() {
-  const [currentView, setCurrentView] = useState<'home' | 'maker' | 'weather-journey' | 'robot-journey'>('home');
+  const [currentView, setCurrentView] = useState<'home' | 'maker' | 'weather-journey' | 'robot-journey' | 'robot-arm-journey'>('home');
 
   useEffect(() => {
     const handleHashChange = () => {
@@ -23,6 +24,8 @@ export default function App() {
         setCurrentView('weather-journey');
       } else if (hash === '#/robot-journey') {
         setCurrentView('robot-journey');
+      } else if (hash === '#/robot-arm-journey') {
+        setCurrentView('robot-arm-journey');
       } else {
         setCurrentView('home');
       }
@@ -39,13 +42,15 @@ export default function App() {
     window.scrollTo(0, 0);
   }, [currentView]);
 
-  const navigateTo = (view: 'home' | 'maker' | 'weather-journey' | 'robot-journey') => {
+  const navigateTo = (view: 'home' | 'maker' | 'weather-journey' | 'robot-journey' | 'robot-arm-journey') => {
     if (view === 'maker') {
       window.location.hash = '#/maker';
     } else if (view === 'weather-journey') {
       window.location.hash = '#/weather-journey';
     } else if (view === 'robot-journey') {
       window.location.hash = '#/robot-journey';
+    } else if (view === 'robot-arm-journey') {
+      window.location.hash = '#/robot-arm-journey';
     } else {
       window.location.hash = '#/';
     }
@@ -73,7 +78,7 @@ export default function App() {
       {/* Actual content above canvas */}
       <div className="relative z-0 flex flex-col w-full min-h-screen overflow-x-hidden">
         <Navigation
-          currentView={(currentView === 'weather-journey' || currentView === 'robot-journey') ? 'home' : currentView}
+          currentView={(currentView === 'weather-journey' || currentView === 'robot-journey' || currentView === 'robot-arm-journey') ? 'home' : currentView}
           onViewChange={navigateTo}
         />
         <main className="flex-1 flex flex-col px-4 md:px-8 pb-16 lg:pb-24 gap-6 max-w-[1280px] w-full mx-auto justify-center">
@@ -88,8 +93,10 @@ export default function App() {
             <MakerPage />
           ) : currentView === 'weather-journey' ? (
             <WeatherJourneyPage onBack={() => navigateTo('home')} />
-          ) : (
+          ) : currentView === 'robot-journey' ? (
             <RobotJourneyPage onBack={() => navigateTo('home')} />
+          ) : (
+            <RobotArmJourneyPage onBack={() => navigateTo('home')} />
           )}
         </main>
       </div>
