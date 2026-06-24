@@ -23,7 +23,7 @@ export default function Navigation({ currentView, onViewChange }: NavigationProp
           onClick={() => onViewChange('home')}
           className="flex items-center gap-2 cursor-pointer hover:opacity-85 transition-opacity focus:outline-none"
         >
-          <div className="w-3 h-3 rounded-full bg-wonder-green"></div>
+          <img src="./logo.png" alt="HD Logo" className="w-8 h-8 rounded-full object-cover" />
           <span className="font-bold tracking-tight text-lg text-gray-100">HD.</span>
         </button>
 

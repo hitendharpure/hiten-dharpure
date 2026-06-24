@@ -7,7 +7,10 @@ interface RobotArmJourneyPageProps {
 
 export default function RobotArmJourneyPage({ onBack }: RobotArmJourneyPageProps) {
   const mediaItems: { type: 'video' | 'image'; src: string; label: string; aspect: string }[] = [
-    // Media items will go here
+    { type: 'video', src: './2nd-gwr-sra/journey/1.mp4', label: 'Step 1: 3D Designing', aspect: 'aspect-video' },
+    { type: 'video', src: './2nd-gwr-sra/journey/2.mp4', label: 'Step 2: Assembling', aspect: 'aspect-video' },
+    { type: 'video', src: './2nd-gwr-sra/journey/3.mp4', label: 'Step 3: Microcontroller Wiring and Checking', aspect: 'aspect-video' },
+    { type: 'video', src: './2nd-gwr-sra/journey/4.mp4', label: 'Step 4: Wiring', aspect: 'aspect-video' }
   ];
 
   return (
