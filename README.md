@@ -1,29 +1,35 @@
+<div align="center">
 
-# Hiten Dharpure | Innovator & Developer Portfolio
+# ✦ Hiten Dharpure | Official Digital Workspace ✦
 
-A high-end, immersive personal portfolio website built to showcase record-breaking hardware engineering, AI development, and robotic innovations. 
+*The digital headquarters for record-breaking hardware engineering, artificial intelligence development, and next-generation micro-robotics.*
 
-The site features a cinematic, live-animated 3D lotus background with a frosted glassmorphic "Bento Grid" layout, designed for maximum visual impact and seamless mobile responsiveness.
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](#)
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](#)
+[![Vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)](#)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](#)
 
-## ✨ Key Features
+<br />
+</div>
 
-* **Immersive UI:** A continuously animated, depth-of-field background paired with `backdrop-blur` glassmorphic content cards.
-* **Bento Grid Layout:** Clean, modular, and fully responsive architecture displaying complex project information efficiently.
-* **Performance Optimized:** Built with a modern tech stack to ensure smooth scrolling and high-fidelity animations without sacrificing speed.
+## ✨ System Architecture & UI
 
-## 🚀 Showcased Projects & Achievements
+This repository contains the source code for an immersive, high-performance personal portfolio. 
 
-* **Guinness World Record (2025):** The world's smallest AI-powered, ultra-portable, and highly precise weather station.
-* **HastaVaani App:** An offline Indian Sign Language translator application featuring a custom 3D avatar (Varnika).
-* **World Record (2024):** Synchronized dance performance with self-created 3D printed robots.
-* **India Book of Records (2023):** Recognized for achieving 801 certificates in STEM, coding, and engineering courses.
+* 🌌 **Immersive Glassmorphic Engine:** Continuous depth-of-field background animations seamlessly integrated with advanced `backdrop-blur` component cards.
+* 🍱 **Bento Grid Layout:** A clean, modular, and fully responsive structural design that presents complex engineering data and project metrics efficiently.
+* ⚡ **Optimized Performance:** Built on a modern, robust tech stack to deliver high-fidelity visual rendering and smooth scrolling without compromising load speeds.
 
-## 💻 Run Locally
+<br />
 
-This project contains everything you need to run the AI Studio app locally.
+## 🏆 Showcased Innovations & Records
 
-**Prerequisites:** Node.js
+| Year | Milestone & Recognition | Engineering Focus |
+| :---: | :--- | :--- |
+| **2026** | 🦾 **World's Smallest Robot Arm** | An ultra-miniaturized robotic arm pushing the boundaries of micro-engineering and precision control. |
+| **2025** | 🌍 **Guinness World Record** | Development of the world's smallest AI-powered, ultra-portable, and highly precise weather station. |
+| **2024** | 🤖 **HastaVaani Application** | An offline Indian Sign Language translator featuring 'Varnika', a custom-built 3D digital avatar. |
+| **2024** | 🕺 **Worldwide Book of Records** | A synchronized robotic dance performance engineered with self-designed, 3D-printed bipedal robots. |
+| **2023** | 📜 **India Book of Records** | Officially recognized for completing 801 advanced certifications across STEM, coding, and engineering. |
 
-1. **Install dependencies:**
-   ```bash
-   npm install
+<br />
