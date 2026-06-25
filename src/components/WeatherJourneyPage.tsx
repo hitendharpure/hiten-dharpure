@@ -56,7 +56,7 @@ export default function WeatherJourneyPage({ onBack }: WeatherJourneyPageProps) 
 
         <div className="relative z-10 flex flex-col gap-6">
           <div className="flex items-center justify-between border-b border-slate-800/60 pb-4">
-            <h2 className="text-lg font-bold text-white tracking-wide">While Creating it</h2>
+            <h2 className="text-lg font-bold text-white tracking-wide">While Creating it...</h2>
             <span className="text-[10px] text-wonder-green font-mono uppercase tracking-widest px-2.5 py-1 bg-wonder-green/10 border border-wonder-green/20 rounded">
               Development Log
             </span>

@@ -33,7 +33,7 @@ export default function RobotArmJourneyPage({ onBack }: RobotArmJourneyPageProps
 
         <div className="flex items-center gap-2 text-wonder-green">
           <div className="w-2 h-2 rounded-full bg-wonder-green animate-pulse"></div>
-          <h3 className="text-xs font-bold uppercase tracking-widest">World Record Project</h3>
+          <h3 className="text-xs font-bold uppercase tracking-widest">Guinness World Record Project</h3>
         </div>
 
         <h1 className="text-3xl md:text-4xl font-black text-white leading-tight tracking-tight max-w-2xl">
@@ -54,7 +54,7 @@ export default function RobotArmJourneyPage({ onBack }: RobotArmJourneyPageProps
 
         <div className="relative z-10 flex flex-col gap-6">
           <div className="flex items-center justify-between border-b border-slate-800/60 pb-4">
-            <h2 className="text-lg font-bold text-white tracking-wide">While Creating it</h2>
+            <h2 className="text-lg font-bold text-white tracking-wide">While Creating it...</h2>
             <span className="text-[10px] text-wonder-green font-mono uppercase tracking-widest px-2.5 py-1 bg-wonder-green/10 border border-wonder-green/20 rounded">
               Development Log
             </span>

@@ -57,9 +57,7 @@ export default function BentoGrid({ onViewChange }: BentoGridProps) {
               <p className="text-sm text-gray-100 font-bold mt-1">School of Scholars, Wanadongri</p>
             </div>
           </div>
-          <div className="mt-auto pt-4 border-t border-slate-800">
-            <span className="text-[10px] text-gray-500 uppercase tracking-wider font-bold">Academic Distinction</span>
-          </div>
+
         </motion.div>
 
         {/* World Record 2026 */}
