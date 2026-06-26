@@ -27,7 +27,7 @@ const MediaPlaceholder = ({ type = 'photo', className = '', label = 'MEDIA', src
 );
 
 interface BentoGridProps {
-  onViewChange: (view: 'home' | 'maker' | 'weather-journey' | 'robot-journey' | 'robot-arm-journey') => void;
+  onViewChange: (view: 'home' | 'maker' | 'weather-journey' | 'robot-journey' | 'robot-arm-journey' | 'robot-arm-media') => void;
 }
 
 export default function BentoGrid({ onViewChange }: BentoGridProps) {
@@ -72,14 +72,22 @@ export default function BentoGrid({ onViewChange }: BentoGridProps) {
               <h3 className="text-xs font-bold uppercase tracking-widest text-wonder-green">Guinness World Record</h3>
               <p className="text-2xl font-bold text-gray-100">Smallest Robot Arm</p>
             </div>
-            <div className="flex flex-row sm:flex-col items-center sm:items-end gap-2 shrink-0">
+            <div className="flex flex-row sm:flex-col items-center sm:items-end gap-2 shrink-0 flex-wrap justify-end">
               <span className="text-xs bg-wonder-green/10 text-wonder-green px-2 py-1 rounded border border-wonder-green/30 font-bold shrink-0">2026</span>
-              <button
-                onClick={() => onViewChange('robot-arm-journey')}
-                className="text-xs font-bold px-3 py-1 rounded bg-wonder-green/20 text-wonder-green hover:bg-wonder-green/30 border border-wonder-green/30 transition-colors flex items-center gap-1 cursor-pointer"
-              >
-                Journey ➔
-              </button>
+              <div className="flex flex-row gap-2">
+                <button
+                  onClick={() => onViewChange('robot-arm-journey')}
+                  className="text-xs font-bold px-3 py-1 rounded bg-wonder-green/20 text-wonder-green hover:bg-wonder-green/30 border border-wonder-green/30 transition-colors flex items-center justify-center gap-1 cursor-pointer"
+                >
+                  Journey ➔
+                </button>
+                <button
+                  onClick={() => onViewChange('robot-arm-media')}
+                  className="text-xs font-bold px-3 py-1 rounded bg-wonder-green/20 text-wonder-green hover:bg-wonder-green/30 border border-wonder-green/30 transition-colors flex items-center justify-center gap-1 cursor-pointer whitespace-nowrap"
+                >
+                  Media Coverage ➔
+                </button>
+              </div>
             </div>
           </div>
           <p className="text-sm text-gray-300 mt-1 leading-relaxed">
@@ -93,8 +101,11 @@ export default function BentoGrid({ onViewChange }: BentoGridProps) {
               <div className="aspect-[4/5] w-full rounded-xl overflow-hidden">
                 <MediaPlaceholder type="photo" src="./2nd-gwr-sra/1.jpg" label="Hiten Holding his Certificate" className="w-full h-full" />
               </div>
+              <div className="aspect-[3/4] w-full rounded-xl overflow-hidden">
+                <MediaPlaceholder type="photo" src="./2nd-gwr-sra/5.jpg" label="Hiten's Felicitation" className="w-full h-full" />
+              </div>
               <div className="aspect-[1206/664] w-full rounded-xl overflow-hidden">
-                <MediaPlaceholder type="photo" src="./2nd-gwr-sra/4.jpg" label="Smallest robot arm Model" className="w-full h-full" />
+                <MediaPlaceholder type="photo" src="./2nd-gwr-sra/4.jpg" label="Smallest robot Arm" className="w-full h-full" />
               </div>
             </div>
 
@@ -105,6 +116,9 @@ export default function BentoGrid({ onViewChange }: BentoGridProps) {
               </div>
               <div className="aspect-[3/4] w-full rounded-xl overflow-hidden">
                 <MediaPlaceholder type="photo" src="./2nd-gwr-sra/3.jpg" label="Hiten in his school uniform" className="w-full h-full" />
+              </div>
+              <div className="aspect-video w-full rounded-xl overflow-hidden">
+                <MediaPlaceholder type="video" src="./2nd-gwr-sra/6.mov" label="Smallest Robot Arm Video" className="w-full h-full" />
               </div>
             </div>
           </div>

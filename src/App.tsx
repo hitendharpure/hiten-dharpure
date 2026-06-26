@@ -11,9 +11,10 @@ import MakerPage from './components/MakerPage';
 import WeatherJourneyPage from './components/WeatherJourneyPage';
 import RobotJourneyPage from './components/RobotJourneyPage';
 import RobotArmJourneyPage from './components/RobotArmJourneyPage';
+import RobotArmMediaPage from './components/RobotArmMediaPage';
 
 export default function App() {
-  const [currentView, setCurrentView] = useState<'home' | 'maker' | 'weather-journey' | 'robot-journey' | 'robot-arm-journey'>('home');
+  const [currentView, setCurrentView] = useState<'home' | 'maker' | 'weather-journey' | 'robot-journey' | 'robot-arm-journey' | 'robot-arm-media'>('home');
 
   useEffect(() => {
     const handleHashChange = () => {
@@ -26,6 +27,8 @@ export default function App() {
         setCurrentView('robot-journey');
       } else if (hash === '#/robot-arm-journey') {
         setCurrentView('robot-arm-journey');
+      } else if (hash === '#/robot-arm-media') {
+        setCurrentView('robot-arm-media');
       } else {
         setCurrentView('home');
       }
@@ -42,7 +45,7 @@ export default function App() {
     window.scrollTo(0, 0);
   }, [currentView]);
 
-  const navigateTo = (view: 'home' | 'maker' | 'weather-journey' | 'robot-journey' | 'robot-arm-journey') => {
+  const navigateTo = (view: 'home' | 'maker' | 'weather-journey' | 'robot-journey' | 'robot-arm-journey' | 'robot-arm-media') => {
     if (view === 'maker') {
       window.location.hash = '#/maker';
     } else if (view === 'weather-journey') {
@@ -51,6 +54,8 @@ export default function App() {
       window.location.hash = '#/robot-journey';
     } else if (view === 'robot-arm-journey') {
       window.location.hash = '#/robot-arm-journey';
+    } else if (view === 'robot-arm-media') {
+      window.location.hash = '#/robot-arm-media';
     } else {
       window.location.hash = '#/';
     }
@@ -78,7 +83,7 @@ export default function App() {
       {/* Actual content above canvas */}
       <div className="relative z-0 flex flex-col w-full min-h-screen overflow-x-hidden">
         <Navigation
-          currentView={(currentView === 'weather-journey' || currentView === 'robot-journey' || currentView === 'robot-arm-journey') ? 'home' : currentView}
+          currentView={(currentView === 'weather-journey' || currentView === 'robot-journey' || currentView === 'robot-arm-journey' || currentView === 'robot-arm-media') ? 'home' : currentView}
           onViewChange={navigateTo}
         />
         <main className="flex-1 flex flex-col px-4 md:px-8 pb-16 lg:pb-24 gap-6 max-w-[1280px] w-full mx-auto justify-center">
@@ -95,11 +100,15 @@ export default function App() {
             <WeatherJourneyPage onBack={() => navigateTo('home')} />
           ) : currentView === 'robot-journey' ? (
             <RobotJourneyPage onBack={() => navigateTo('home')} />
-          ) : (
+          ) : currentView === 'robot-arm-journey' ? (
             <RobotArmJourneyPage onBack={() => navigateTo('home')} />
+          ) : (
+            <RobotArmMediaPage onBack={() => navigateTo('home')} />
           )}
         </main>
       </div>
     </div>
   );
 }
+
+
