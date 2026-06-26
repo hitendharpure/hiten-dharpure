@@ -6,7 +6,34 @@ interface WeatherMediaPageProps {
 }
 
 export default function WeatherMediaPage({ onBack }: WeatherMediaPageProps) {
-  const mediaItems: { type: 'video' | 'image'; src: string; label: string; aspect: string }[] = [];
+  const mediaItems: { type: 'video' | 'image'; src: string; label: string; aspect: string; link?: string; linkText?: string }[] = [
+    {
+      type: 'image',
+      src: './1st-gwr/media/1.jpg',
+      label: 'Lokmat - 8th December 2025',
+      aspect: 'aspect-[3/4]',
+    },
+    {
+      type: 'image',
+      src: './1st-gwr/media/2.jpg',
+      label: 'Dainik Bhaskar - 1st December 2025',
+      aspect: 'aspect-[3/4]',
+    },
+    {
+      type: 'image',
+      src: './1st-gwr/media/3.jpg',
+      label: 'NavBharat - 4th December 2025',
+      aspect: 'aspect-[16/9]',
+    },
+    {
+      type: 'video',
+      src: './1st-gwr/media/News18 Marathi.mp4',
+      label: 'News18 Marathi',
+      aspect: 'aspect-[16/9]',
+      link: 'https://news18marathi.com/technology/16-year-old-hiten-dharapure-has-built-the-worlds-smallest-ai-based-weather-station-video-local18-1556400.html',
+      linkText: 'Article View ➔'
+    }
+  ];
 
   return (
     <motion.div
@@ -66,19 +93,24 @@ export default function WeatherMediaPage({ onBack }: WeatherMediaPageProps) {
               <div key={colIndex} className="flex flex-col gap-6 w-full md:w-1/2">
                 {mediaItems.filter((_, i) => i % 2 === colIndex).map((item, index) => (
                   <div key={`${colIndex}-${index}`} className="flex flex-col gap-2.5 w-full">
-                    <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-wider px-1">
-                      {item.label}
-                    </h4>
+                    <div className="flex justify-between items-center px-1">
+                      <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-wider">
+                        {item.label}
+                      </h4>
+                      {item.link && (
+                        <a href={item.link} target="_blank" rel="noopener noreferrer" className={`text-[11px] font-bold px-2.5 py-1 rounded-md transition-colors whitespace-nowrap cursor-pointer z-20 flex items-center gap-1 ${item.linkText?.includes('YouTube') ? 'bg-red-500/10 text-red-400 hover:bg-red-500/20 border border-red-500/30' : 'bg-blue-500/10 text-blue-400 hover:bg-blue-500/20 border border-blue-500/30'}`}>
+                          {item.linkText || 'Link ➔'}
+                        </a>
+                      )}
+                    </div>
                     <div
                       className={`${item.aspect} w-full rounded-xl overflow-hidden bg-slate-950 border border-slate-800 hover:border-wonder-green/30 hover:shadow-xl transition-all duration-300 relative group`}
                     >
                       {item.type === 'video' ? (
                         <video
                           src={item.src}
-                          className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500"
-                          autoPlay
-                          muted
-                          loop
+                          className="w-full h-full object-cover"
+                          controls
                           playsInline
                           preload="metadata"
                         />
@@ -90,17 +122,19 @@ export default function WeatherMediaPage({ onBack }: WeatherMediaPageProps) {
                           loading="lazy"
                         />
                       )}
-                      {/* Overlay Label on Hover */}
-                      <div className="absolute inset-0 bg-slate-950/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-3 pointer-events-none z-10">
-                        <div className="flex justify-end">
-                          <span className="p-1 rounded bg-slate-900/80 border border-slate-800 text-wonder-green">
-                            {item.type === 'video' ? <Play className="w-3 h-3 fill-current" /> : <Image className="w-3 h-3" />}
+                      {/* Overlay Label on Hover (Images only) */}
+                      {item.type !== 'video' && (
+                        <div className="absolute inset-0 bg-slate-950/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-3 pointer-events-none z-10">
+                          <div className="flex justify-end">
+                            <span className="p-1 rounded bg-slate-900/80 border border-slate-800 text-wonder-green">
+                              <Image className="w-3 h-3" />
+                            </span>
+                          </div>
+                          <span className="text-white text-[10px] font-bold tracking-wider uppercase bg-slate-950/80 px-2 py-1 rounded border border-slate-800 self-start">
+                            {item.label}
                           </span>
                         </div>
-                        <span className="text-white text-[10px] font-bold tracking-wider uppercase bg-slate-950/80 px-2 py-1 rounded border border-slate-800 self-start">
-                          {item.label}
-                        </span>
-                      </div>
+                      )}
                     </div>
                   </div>
                 ))}
