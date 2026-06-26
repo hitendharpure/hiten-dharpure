@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 interface NavigationProps {
   currentView: 'home' | 'maker';
-  onViewChange: (view: 'home' | 'maker') => void;
+  onViewChange: (view: 'home' | 'maker' | 'all-media') => void;
 }
 
 export default function Navigation({ currentView, onViewChange }: NavigationProps) {
@@ -38,14 +38,12 @@ export default function Navigation({ currentView, onViewChange }: NavigationProp
             More about Me
           </button>
 
-          <a
-            href="./mediacoverage.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-4 py-1.5 text-xs font-bold bg-lotus-pink text-white rounded-full hover:scale-105 hover:shadow-lg hover:shadow-lotus-pink/30 active:scale-95 transition-all duration-300 ease-out border border-lotus-pink/20"
+          <button
+            onClick={() => onViewChange('all-media')}
+            className="px-4 py-1.5 text-xs font-bold bg-lotus-pink text-white rounded-full hover:scale-105 hover:shadow-lg hover:shadow-lotus-pink/30 active:scale-95 transition-all duration-300 ease-out border border-lotus-pink/20 cursor-pointer"
           >
             Media Coverage
-          </a>
+          </button>
         </div>
       </nav>
     </header>

@@ -14,9 +14,12 @@ import RobotArmJourneyPage from './components/RobotArmJourneyPage';
 import RobotArmMediaPage from './components/RobotArmMediaPage';
 import WeatherMediaPage from './components/WeatherMediaPage';
 import RobotMediaPage from './components/RobotMediaPage';
+import GpaimediaPage from './components/GpaimediaPage';
+import IbrmediaPage from './components/IbrmediaPage';
+import AllMediaPage from './components/AllMediaPage';
 
 export default function App() {
-  const [currentView, setCurrentView] = useState<'home' | 'maker' | 'weather-journey' | 'robot-journey' | 'robot-arm-journey' | 'robot-arm-media' | 'weather-media' | 'robot-media'>('home');
+  const [currentView, setCurrentView] = useState<'home' | 'maker' | 'weather-journey' | 'robot-journey' | 'robot-arm-journey' | 'robot-arm-media' | 'weather-media' | 'robot-media' | 'gpai-media' | 'ibr-media' | 'all-media'>('home');
 
   useEffect(() => {
     const handleHashChange = () => {
@@ -35,6 +38,12 @@ export default function App() {
         setCurrentView('weather-media');
       } else if (hash === '#/robot-media') {
         setCurrentView('robot-media');
+      } else if (hash === '#/gpai-media') {
+        setCurrentView('gpai-media');
+      } else if (hash === '#/ibr-media') {
+        setCurrentView('ibr-media');
+      } else if (hash === '#/all-media') {
+        setCurrentView('all-media');
       } else {
         setCurrentView('home');
       }
@@ -51,7 +60,7 @@ export default function App() {
     window.scrollTo(0, 0);
   }, [currentView]);
 
-  const navigateTo = (view: 'home' | 'maker' | 'weather-journey' | 'robot-journey' | 'robot-arm-journey' | 'robot-arm-media' | 'weather-media' | 'robot-media') => {
+  const navigateTo = (view: 'home' | 'maker' | 'weather-journey' | 'robot-journey' | 'robot-arm-journey' | 'robot-arm-media' | 'weather-media' | 'robot-media' | 'gpai-media' | 'ibr-media' | 'all-media') => {
     if (view === 'maker') {
       window.location.hash = '#/maker';
     } else if (view === 'weather-journey') {
@@ -66,6 +75,12 @@ export default function App() {
       window.location.hash = '#/weather-media';
     } else if (view === 'robot-media') {
       window.location.hash = '#/robot-media';
+    } else if (view === 'gpai-media') {
+      window.location.hash = '#/gpai-media';
+    } else if (view === 'ibr-media') {
+      window.location.hash = '#/ibr-media';
+    } else if (view === 'all-media') {
+      window.location.hash = '#/all-media';
     } else {
       window.location.hash = '#/';
     }
@@ -93,8 +108,8 @@ export default function App() {
       {/* Actual content above canvas */}
       <div className="relative z-0 flex flex-col w-full min-h-screen overflow-x-hidden">
         <Navigation
-          currentView={(currentView === 'weather-journey' || currentView === 'robot-journey' || currentView === 'robot-arm-journey' || currentView === 'robot-arm-media' || currentView === 'weather-media' || currentView === 'robot-media') ? 'home' : currentView}
-          onViewChange={navigateTo}
+          currentView={(currentView === 'weather-journey' || currentView === 'robot-journey' || currentView === 'robot-arm-journey' || currentView === 'robot-arm-media' || currentView === 'weather-media' || currentView === 'robot-media' || currentView === 'gpai-media' || currentView === 'ibr-media' || currentView === 'all-media') ? 'home' : currentView}
+          onViewChange={navigateTo as any}
         />
         <main className="flex-1 flex flex-col px-4 md:px-8 pb-16 lg:pb-24 gap-6 max-w-[1280px] w-full mx-auto justify-center">
           {currentView === 'home' ? (
@@ -116,8 +131,14 @@ export default function App() {
             <RobotArmMediaPage onBack={() => navigateTo('home')} />
           ) : currentView === 'weather-media' ? (
             <WeatherMediaPage onBack={() => navigateTo('home')} />
-          ) : (
+          ) : currentView === 'robot-media' ? (
             <RobotMediaPage onBack={() => navigateTo('home')} />
+          ) : currentView === 'gpai-media' ? (
+            <GpaimediaPage onBack={() => navigateTo('home')} />
+          ) : currentView === 'ibr-media' ? (
+            <IbrmediaPage onBack={() => navigateTo('home')} />
+          ) : (
+            <AllMediaPage onViewChange={navigateTo as any} onBack={() => navigateTo('home')} />
           )}
         </main>
       </div>

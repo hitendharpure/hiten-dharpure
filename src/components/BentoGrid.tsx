@@ -27,7 +27,7 @@ const MediaPlaceholder = ({ type = 'photo', className = '', label = 'MEDIA', src
 );
 
 interface BentoGridProps {
-  onViewChange: (view: 'home' | 'maker' | 'weather-journey' | 'robot-journey' | 'robot-arm-journey' | 'robot-arm-media' | 'weather-media' | 'robot-media') => void;
+  onViewChange: (view: 'home' | 'maker' | 'weather-journey' | 'robot-journey' | 'robot-arm-journey' | 'robot-arm-media' | 'weather-media' | 'robot-media' | 'gpai-media' | 'ibr-media') => void;
 }
 
 export default function BentoGrid({ onViewChange }: BentoGridProps) {
@@ -95,31 +95,24 @@ export default function BentoGrid({ onViewChange }: BentoGridProps) {
           </p>
 
 
-          <div className="flex flex-col sm:flex-row gap-4 mt-4 w-full">
-            {/* Column 1: Main Image */}
-            <div className="flex flex-col gap-4 w-full sm:w-1/2">
-              <div className="aspect-[4/5] w-full rounded-xl overflow-hidden">
-                <MediaPlaceholder type="photo" src="./2nd-gwr-sra/1.jpg" label="Hiten Holding his Certificate" className="w-full h-full" />
-              </div>
-              <div className="aspect-[3/4] w-full rounded-xl overflow-hidden">
-                <MediaPlaceholder type="photo" src="./2nd-gwr-sra/5.jpg" label="Hiten's Felicitation" className="w-full h-full" />
-              </div>
-              <div className="aspect-[1206/664] w-full rounded-xl overflow-hidden">
-                <MediaPlaceholder type="photo" src="./2nd-gwr-sra/4.jpg" label="Smallest robot Arm" className="w-full h-full" />
-              </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4 w-full">
+            <div className="aspect-[3/4] w-full rounded-xl overflow-hidden">
+              <MediaPlaceholder type="photo" src="./2nd-gwr-sra/1.jpg" label="Hiten Holding his Certificate" className="w-full h-full" />
             </div>
-
-            {/* Column 2: Other Images */}
-            <div className="flex flex-col gap-4 w-full sm:w-1/2">
-              <div className="aspect-[3/4] w-full rounded-xl overflow-hidden">
-                <MediaPlaceholder type="photo" src="./2nd-gwr-sra/2.jpg" label="Hiten Holding his Certificate and his dummy Arm model" className="w-full h-full" />
-              </div>
-              <div className="aspect-[3/4] w-full rounded-xl overflow-hidden">
-                <MediaPlaceholder type="photo" src="./2nd-gwr-sra/3.jpg" label="Hiten in his school uniform" className="w-full h-full" />
-              </div>
-              <div className="aspect-video w-full rounded-xl overflow-hidden">
-                <MediaPlaceholder type="video" src="./2nd-gwr-sra/6.mov" label="Smallest Robot Arm Video" className="w-full h-full" />
-              </div>
+            <div className="aspect-[3/4] w-full rounded-xl overflow-hidden">
+              <MediaPlaceholder type="photo" src="./2nd-gwr-sra/2.jpg" label="Hiten Holding his Certificate and his dummy Arm model" className="w-full h-full" />
+            </div>
+            <div className="aspect-[3/4] w-full rounded-xl overflow-hidden">
+              <MediaPlaceholder type="photo" src="./2nd-gwr-sra/5.jpg" label="Hiten's Felicitation" className="w-full h-full" />
+            </div>
+            <div className="aspect-[3/4] w-full rounded-xl overflow-hidden">
+              <MediaPlaceholder type="photo" src="./2nd-gwr-sra/3.jpg" label="Hiten in his school uniform" className="w-full h-full" />
+            </div>
+            <div className="aspect-[1206/664] w-full rounded-xl overflow-hidden">
+              <MediaPlaceholder type="photo" src="./2nd-gwr-sra/4.jpg" label="Smallest robot Arm" className="w-full h-full" />
+            </div>
+            <div className="aspect-video w-full rounded-xl overflow-hidden">
+              <MediaPlaceholder type="video" src="./2nd-gwr-sra/6.mov" label="Smallest Robot Arm Video" className="w-full h-full" />
             </div>
           </div>
         </motion.div>
@@ -196,8 +189,8 @@ export default function BentoGrid({ onViewChange }: BentoGridProps) {
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.3 }}
           className="w-full bg-slate-900/40 backdrop-blur-md border border-slate-800/65 rounded-2xl p-5 flex flex-col hover:scale-[1.02] hover:shadow-2xl transition-all"
         >
-          <div className="flex justify-between items-start w-full gap-2 mb-1 flex-col sm:flex-row sm:items-center">
-            <h3 className="text-sm font-bold uppercase tracking-widest text-wonder-green">HastaVaani App</h3>
+          <div className="flex justify-between items-start w-full gap-2 mb-0 flex-col sm:flex-row sm:items-center">
+            <h3 className="text-2xl font-bold text-wonder-green">HastaVaani App</h3>
             <div className="flex flex-row sm:flex-col items-center sm:items-end gap-2 shrink-0">
               <div className="flex flex-row items-center gap-2">
                 <a
@@ -220,9 +213,9 @@ export default function BentoGrid({ onViewChange }: BentoGridProps) {
               </a>
             </div>
           </div>
-          <p className="text-sm font-semibold text-gray-100 mb-3">An Indian Sign Language Translator App</p>
+          <p className="text-base font-semibold text-gray-100 mb-1">An Indian Sign Language Translator App</p>
 
-          <div className="space-y-2 mt-1 mb-4 flex-1">
+          <div className="space-y-2 mt-0 mb-4 flex-1">
             <h4 className="text-[10px] font-bold uppercase tracking-wider text-wonder-blue">Unique Features:</h4>
             <ul className="text-[11px] text-gray-400 space-y-1.5 list-disc list-outside pl-3 leading-relaxed">
               <li>Fully offline functionality, no internet required.</li>
@@ -263,16 +256,16 @@ export default function BentoGrid({ onViewChange }: BentoGridProps) {
             </div>
             <div className="flex flex-row sm:flex-col items-center sm:items-end gap-2 shrink-0 flex-wrap justify-end">
               <span className="text-xs bg-wonder-green/10 text-wonder-green px-2 py-1 rounded border border-wonder-green/30 font-bold shrink-0">2024</span>
-              <div className="flex flex-col gap-2 w-full sm:w-auto">
+              <div className="flex flex-row sm:flex-col gap-2 sm:items-stretch flex-wrap justify-end">
                 <button
                   onClick={() => onViewChange('robot-journey')}
-                  className="text-xs font-bold px-3 py-1 rounded bg-wonder-green/20 text-wonder-green hover:bg-wonder-green/30 border border-wonder-green/30 transition-colors flex items-center justify-center gap-1 cursor-pointer w-full"
+                  className="text-xs font-bold px-3 py-1 rounded bg-wonder-green/20 text-wonder-green hover:bg-wonder-green/30 border border-wonder-green/30 transition-colors flex items-center justify-center gap-1 cursor-pointer"
                 >
                   Journey ➔
                 </button>
                 <button
                   onClick={() => onViewChange('robot-media')}
-                  className="text-xs font-bold px-3 py-1 rounded bg-wonder-green/20 text-wonder-green hover:bg-wonder-green/30 border border-wonder-green/30 transition-colors flex items-center justify-center gap-1 cursor-pointer whitespace-nowrap w-full"
+                  className="text-xs font-bold px-3 py-1 rounded bg-wonder-green/20 text-wonder-green hover:bg-wonder-green/30 border border-wonder-green/30 transition-colors flex items-center justify-center gap-1 cursor-pointer whitespace-nowrap"
                 >
                   Media Coverage ➔
                 </button>
@@ -301,7 +294,17 @@ export default function BentoGrid({ onViewChange }: BentoGridProps) {
               <h3 className="text-sm font-bold uppercase tracking-widest text-wonder-green">Global Partnership on Artificial Intelligence (GPAI) Summit</h3>
               <p className="text-base font-bold text-gray-100">Presented my project as top 10 winners of YUVAi Program</p>
             </div>
-            <span className="text-xs bg-wonder-green/10 text-wonder-green px-2 py-1 rounded border border-wonder-green/30 font-bold shrink-0">2023</span>
+            <div className="flex flex-row sm:flex-col items-center sm:items-end gap-2 shrink-0 flex-wrap justify-end">
+              <span className="text-xs bg-wonder-green/10 text-wonder-green px-2 py-1 rounded border border-wonder-green/30 font-bold shrink-0">2023</span>
+              <div className="flex flex-row sm:flex-col gap-2 sm:items-stretch flex-wrap justify-end relative z-20">
+                <button
+                  onClick={() => onViewChange('gpai-media')}
+                  className="text-xs font-bold px-3 py-1 rounded bg-wonder-green/20 text-wonder-green hover:bg-wonder-green/30 border border-wonder-green/30 transition-colors flex items-center justify-center gap-1 cursor-pointer whitespace-nowrap"
+                >
+                  Media Coverage ➔
+                </button>
+              </div>
+            </div>
           </div>
 
           <div className="flex flex-col gap-3 mt-6 w-full">
@@ -341,9 +344,19 @@ export default function BentoGrid({ onViewChange }: BentoGridProps) {
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.5 }}
           className="w-full bg-slate-900/40 backdrop-blur-md border border-slate-800/65 rounded-2xl p-5 flex flex-col hover:scale-[1.02] hover:shadow-2xl transition-all"
         >
-          <div className="flex justify-between items-start w-full gap-2 mb-2">
+          <div className="flex justify-between items-start w-full gap-2 mb-2 flex-col sm:flex-row">
             <h3 className="text-xs font-bold uppercase tracking-widest text-wonder-green">India Book of Records</h3>
-            <span className="text-xs bg-wonder-green/10 text-wonder-green px-2 py-1 rounded border border-wonder-green/30 font-bold shrink-0">2023</span>
+            <div className="flex flex-row sm:flex-col items-center sm:items-end gap-2 shrink-0 flex-wrap justify-end">
+              <span className="text-xs bg-wonder-green/10 text-wonder-green px-2 py-1 rounded border border-wonder-green/30 font-bold shrink-0">2023</span>
+              <div className="flex flex-row sm:flex-col gap-2 sm:items-stretch flex-wrap justify-end relative z-20">
+                <button
+                  onClick={() => onViewChange('ibr-media')}
+                  className="text-xs font-bold px-3 py-1 rounded bg-wonder-green/20 text-wonder-green hover:bg-wonder-green/30 border border-wonder-green/30 transition-colors flex items-center justify-center gap-1 cursor-pointer whitespace-nowrap"
+                >
+                  Media Coverage ➔
+                </button>
+              </div>
+            </div>
           </div>
           <div className="flex items-center gap-4 mt-2">
             <div className="text-5xl font-black text-white italic">801</div>

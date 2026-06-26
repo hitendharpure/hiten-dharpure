@@ -5,8 +5,94 @@ interface RobotMediaPageProps {
   onBack: () => void;
 }
 
+const MediaCard = ({ item }: { item: any; key?: string }) => (
+  <div className="flex flex-col gap-2.5 w-full">
+    <div className="flex justify-between items-center px-1">
+      <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-wider">
+        {item.label}
+      </h4>
+      {item.link && (
+        <a href={item.link} target="_blank" rel="noopener noreferrer" className={`text-[11px] font-bold px-2.5 py-1 rounded-md transition-colors whitespace-nowrap cursor-pointer z-20 flex items-center gap-1 ${item.linkText?.includes('YouTube') ? 'bg-red-500/10 text-red-400 hover:bg-red-500/20 border border-red-500/30' : 'bg-blue-500/10 text-blue-400 hover:bg-blue-500/20 border border-blue-500/30'}`}>
+          {item.linkText || 'Link ➔'}
+        </a>
+      )}
+    </div>
+    <div
+      className={`${item.aspect} w-full rounded-xl overflow-hidden bg-slate-950 border border-slate-800 hover:border-wonder-green/30 hover:shadow-xl transition-all duration-300 relative group`}
+    >
+      {item.type === 'video' ? (
+        <video
+          src={item.src}
+          className="w-full h-full object-cover"
+          controls
+          playsInline
+          preload="metadata"
+        />
+      ) : (
+        <img
+          src={item.src}
+          className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500"
+          alt={item.label}
+          loading="lazy"
+        />
+      )}
+      {item.type !== 'video' && (
+        <div className="absolute inset-0 bg-slate-950/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-3 pointer-events-none z-10">
+          <div className="flex justify-end">
+            <span className="p-1 rounded bg-slate-900/80 border border-slate-800 text-wonder-green">
+              <Image className="w-3 h-3" />
+            </span>
+          </div>
+          <span className="text-white text-[10px] font-bold tracking-wider uppercase bg-slate-950/80 px-2 py-1 rounded border border-slate-800 self-start">
+            {item.label}
+          </span>
+        </div>
+      )}
+    </div>
+  </div>
+);
+
 export default function RobotMediaPage({ onBack }: RobotMediaPageProps) {
-  const mediaItems: { type: 'video' | 'image'; src: string; label: string; aspect: string }[] = [];
+  const mediaItems: { type: 'video' | 'image'; src: string; label: string; aspect: string; link?: string; linkText?: string }[] = [
+    {
+      type: 'image',
+      src: './Worldwide Book of Records/media/1.jpg',
+      label: 'Sakal - 22th June 2024',
+      aspect: 'aspect-[16/9]',
+    },
+    {
+      type: 'image',
+      src: './Worldwide Book of Records/media/2.jpg',
+      label: 'Dainik Bhaskar - 27th June 2024',
+      aspect: 'aspect-[5/8]',
+    },
+    {
+      type: 'image',
+      src: './Worldwide Book of Records/media/3.jpg',
+      label: 'Times of India - 21st June 2024',
+      aspect: 'aspect-[2/3]',
+    },
+    {
+      type: 'image',
+      src: './Worldwide Book of Records/media/4.jpg',
+      label: 'The Hitavada - 29th June 2024',
+      aspect: 'aspect-[16/9]',
+    },
+    {
+      type: 'image',
+      src: './Worldwide Book of Records/media/5.jpg',
+      label: 'Maharashtra Times - 27th June 2024',
+      aspect: 'aspect-[4/3]',
+    },
+    {
+      type: 'image',
+      src: './Worldwide Book of Records/media/6.png',
+      label: 'ESakal Website',
+      aspect: 'aspect-[16/9]',
+      link: 'https://www.esakal.com/sci-tech/15-years-old-hiten-has-entered-the-world-book-of-records-by-creating-dancing-robot-using-3d-printer-ppb94',
+      linkText: 'Article ➔'
+    }
+  ];
 
   return (
     <motion.div
@@ -55,54 +141,29 @@ export default function RobotMediaPage({ onBack }: RobotMediaPageProps) {
             </span>
           </div>
 
-          {/* Masonry Layout */}
-          <div className="flex flex-col md:flex-row gap-6 w-full">
+          {/* Mobile Layout (Sequential) */}
+          <div className="flex flex-col gap-6 w-full md:hidden">
+            {mediaItems.length === 0 && (
+              <div className="w-full text-center py-12 border border-dashed border-slate-800 rounded-xl">
+                <p className="text-sm text-gray-400">Media coming soon...</p>
+              </div>
+            )}
+            {mediaItems.map((item, index) => (
+              <MediaCard key={`mobile-${index}`} item={item} />
+            ))}
+          </div>
+
+          {/* Desktop Layout (Masonry) */}
+          <div className="hidden md:flex flex-row gap-6 w-full">
             {mediaItems.length === 0 && (
               <div className="w-full text-center py-12 border border-dashed border-slate-800 rounded-xl">
                 <p className="text-sm text-gray-400">Media coming soon...</p>
               </div>
             )}
             {mediaItems.length > 0 && [0, 1].map((colIndex) => (
-              <div key={colIndex} className="flex flex-col gap-6 w-full md:w-1/2">
-                {mediaItems.filter((_, i) => i % 2 === colIndex).map((item, index) => (
-                  <div key={`${colIndex}-${index}`} className="flex flex-col gap-2.5 w-full">
-                    <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-wider px-1">
-                      {item.label}
-                    </h4>
-                    <div
-                      className={`${item.aspect} w-full rounded-xl overflow-hidden bg-slate-950 border border-slate-800 hover:border-wonder-green/30 hover:shadow-xl transition-all duration-300 relative group`}
-                    >
-                      {item.type === 'video' ? (
-                        <video
-                          src={item.src}
-                          className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500"
-                          autoPlay
-                          muted
-                          loop
-                          playsInline
-                          preload="metadata"
-                        />
-                      ) : (
-                        <img
-                          src={item.src}
-                          className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500"
-                          alt={item.label}
-                          loading="lazy"
-                        />
-                      )}
-                      {/* Overlay Label on Hover */}
-                      <div className="absolute inset-0 bg-slate-950/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-3 pointer-events-none z-10">
-                        <div className="flex justify-end">
-                          <span className="p-1 rounded bg-slate-900/80 border border-slate-800 text-wonder-green">
-                            {item.type === 'video' ? <Play className="w-3 h-3 fill-current" /> : <Image className="w-3 h-3" />}
-                          </span>
-                        </div>
-                        <span className="text-white text-[10px] font-bold tracking-wider uppercase bg-slate-950/80 px-2 py-1 rounded border border-slate-800 self-start">
-                          {item.label}
-                        </span>
-                      </div>
-                    </div>
-                  </div>
+              <div key={`desktop-col-${colIndex}`} className="flex flex-col gap-6 w-1/2">
+                {mediaItems.filter((_, i) => i % 2 === colIndex).map((item, originalIndex) => (
+                  <MediaCard key={`desktop-${colIndex}-${originalIndex}`} item={item} />
                 ))}
               </div>
             ))}

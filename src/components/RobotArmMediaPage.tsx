@@ -5,8 +5,55 @@ interface RobotArmMediaPageProps {
   onBack: () => void;
 }
 
+const MediaCard = ({ item }: { item: any; key?: string }) => (
+  <div className="flex flex-col gap-2.5 w-full">
+    <div className="flex justify-between items-center px-1">
+      <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-wider">
+        {item.label}
+      </h4>
+      {item.link && (
+        <a href={item.link} target="_blank" rel="noopener noreferrer" className={`text-[11px] font-bold px-2.5 py-1 rounded-md transition-colors whitespace-nowrap cursor-pointer z-20 flex items-center gap-1 ${item.linkText?.includes('YouTube') ? 'bg-red-500/10 text-red-400 hover:bg-red-500/20 border border-red-500/30' : 'bg-blue-500/10 text-blue-400 hover:bg-blue-500/20 border border-blue-500/30'}`}>
+          {item.linkText || 'Link ➔'}
+        </a>
+      )}
+    </div>
+    <div
+      className={`${item.aspect} w-full rounded-xl overflow-hidden bg-slate-950 border border-slate-800 hover:border-wonder-green/30 hover:shadow-xl transition-all duration-300 relative group`}
+    >
+      {item.type === 'video' ? (
+        <video
+          src={item.src}
+          className="w-full h-full object-cover"
+          controls
+          playsInline
+          preload="metadata"
+        />
+      ) : (
+        <img
+          src={item.src}
+          className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500"
+          alt={item.label}
+          loading="lazy"
+        />
+      )}
+      {item.type !== 'video' && (
+        <div className="absolute inset-0 bg-slate-950/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-3 pointer-events-none z-10">
+          <div className="flex justify-end">
+            <span className="p-1 rounded bg-slate-900/80 border border-slate-800 text-wonder-green">
+              <Image className="w-3 h-3" />
+            </span>
+          </div>
+          <span className="text-white text-[10px] font-bold tracking-wider uppercase bg-slate-950/80 px-2 py-1 rounded border border-slate-800 self-start">
+            {item.label}
+          </span>
+        </div>
+      )}
+    </div>
+  </div>
+);
+
 export default function RobotArmMediaPage({ onBack }: RobotArmMediaPageProps) {
-  const mediaItems: { type: 'video' | 'image'; src: string; label: string; aspect: string; link?: string }[] = [
+  const mediaItems: { type: 'video' | 'image'; src: string; label: string; aspect: string; link?: string; linkText?: string }[] = [
     {
       type: 'image',
       src: './2nd-gwr-sra/media/1.jpg',
@@ -27,14 +74,20 @@ export default function RobotArmMediaPage({ onBack }: RobotArmMediaPageProps) {
     },
     {
       type: 'image',
+      src: './2nd-gwr-sra/media/5.jpg',
+      label: 'Vidarbha Ki Baat - 24th June 2026',
+      aspect: 'aspect-[16/9]',
+    },
+    {
+      type: 'image',
       src: './2nd-gwr-sra/media/4.jpg',
       label: 'Nagpur Post - 24th June 2026',
       aspect: 'aspect-[16/9]',
     },
     {
       type: 'image',
-      src: './2nd-gwr-sra/media/5.jpg',
-      label: 'Vidarbha Ki Baat - 24th June 2026',
+      src: './2nd-gwr-sra/media/7.jpg',
+      label: 'Dainik Sinhvani Vrutta - 25th June 2026',
       aspect: 'aspect-[16/9]',
     },
     {
@@ -45,9 +98,9 @@ export default function RobotArmMediaPage({ onBack }: RobotArmMediaPageProps) {
     },
     {
       type: 'image',
-      src: './2nd-gwr-sra/media/7.jpg',
-      label: 'Dainik Sinhvani Vrutta - 25th June 2026',
-      aspect: 'aspect-[16/9]',
+      src: './2nd-gwr-sra/media/8.jpg',
+      label: 'Insider News Today - 24th June 2026',
+      aspect: 'aspect-[4/3]',
     },
     {
       type: 'video',
@@ -58,9 +111,35 @@ export default function RobotArmMediaPage({ onBack }: RobotArmMediaPageProps) {
     },
     {
       type: 'image',
-      src: './2nd-gwr-sra/media/8.jpg',
-      label: 'Insider News Today - 24th June 2026',
-      aspect: 'aspect-[4/3]',
+      src: './2nd-gwr-sra/media/10.png',
+      label: 'United News of india - Web',
+      aspect: 'aspect-[16/9]',
+      link: 'https://www.uniindia.com/nagpur-student-sets-guinness-world-record-with-world-s-smallest-robotic-arm/west/news/3886803.html',
+      linkText: 'Article'
+    },
+    {
+      type: 'image',
+      src: './2nd-gwr-sra/media/9.png',
+      label: 'DailyHunt - Web',
+      aspect: 'aspect-[16/9]',
+      link: 'https://m.dailyhunt.in/news/india/marathi/tarun+bharat+nagpur-epaper-tarnbhat/hiten+dharapurecha+jagatik+vikram-newsid-n717203342',
+      linkText: 'Article'
+    },
+    {
+      type: 'image',
+      src: './2nd-gwr-sra/media/12.png',
+      label: 'Tarun Bharat - Web',
+      aspect: 'aspect-[16/9]',
+      link: 'https://www.tarunbharat.net/Encyc/2026/6/24/hiten-dharpure-world-record.html',
+      linkText: 'Article'
+    },
+    {
+      type: 'image',
+      src: './2nd-gwr-sra/media/11.png',
+      label: 'The Live Nagpur - Web',
+      aspect: 'aspect-[16/9]',
+      link: 'https://thelivenagpur.com/2026/06/24/nagpur-student-hiten-dharpure-sets-guinness-world-record-for-worlds-smallest-robotic-arm/',
+      linkText: 'Article'
     }
   ];
 
@@ -111,59 +190,25 @@ export default function RobotArmMediaPage({ onBack }: RobotArmMediaPageProps) {
             </span>
           </div>
 
-          {/* Masonry Layout */}
-          <div className="flex flex-col md:flex-row gap-6 w-full">
+          {/* Mobile Layout (Sequential) */}
+          <div className="flex flex-col gap-6 w-full md:hidden">
+            {mediaItems.length === 0 && (
+              <p className="text-sm text-gray-400 w-full">Media coming soon...</p>
+            )}
+            {mediaItems.map((item, index) => (
+              <MediaCard key={`mobile-${index}`} item={item} />
+            ))}
+          </div>
+
+          {/* Desktop Layout (Masonry) */}
+          <div className="hidden md:flex flex-row gap-6 w-full">
             {mediaItems.length === 0 && (
               <p className="text-sm text-gray-400 w-full">Media coming soon...</p>
             )}
             {[0, 1].map((colIndex) => (
-              <div key={colIndex} className="flex flex-col gap-6 w-full md:w-1/2">
-                {mediaItems.filter((_, i) => i % 2 === colIndex).map((item, index) => (
-                  <div key={`${colIndex}-${index}`} className="flex flex-col gap-2.5 w-full">
-                    <div className="flex justify-between items-center px-1">
-                      <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-wider">
-                        {item.label}
-                      </h4>
-                      {item.link && (
-                        <a href={item.link} target="_blank" rel="noopener noreferrer" className="text-[11px] font-bold bg-red-500/10 text-red-400 hover:bg-red-500/20 border border-red-500/30 px-2.5 py-1 rounded-md transition-colors whitespace-nowrap cursor-pointer z-20">
-                          YouTube ➔
-                        </a>
-                      )}
-                    </div>
-                    <div
-                      className={`${item.aspect} w-full rounded-xl overflow-hidden bg-slate-950 border border-slate-800 hover:border-wonder-green/30 hover:shadow-xl transition-all duration-300 relative group`}
-                    >
-                      {item.type === 'video' ? (
-                        <video
-                          src={item.src}
-                          className="w-full h-full object-cover"
-                          controls
-                          playsInline
-                          preload="metadata"
-                        />
-                      ) : (
-                        <img
-                          src={item.src}
-                          className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500"
-                          alt={item.label}
-                          loading="lazy"
-                        />
-                      )}
-                      {/* Overlay Label on Hover (Images only) */}
-                      {item.type !== 'video' && (
-                        <div className="absolute inset-0 bg-slate-950/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-3 pointer-events-none z-10">
-                          <div className="flex justify-end">
-                            <span className="p-1 rounded bg-slate-900/80 border border-slate-800 text-wonder-green">
-                              <Image className="w-3 h-3" />
-                            </span>
-                          </div>
-                          <span className="text-white text-[10px] font-bold tracking-wider uppercase bg-slate-950/80 px-2 py-1 rounded border border-slate-800 self-start">
-                            {item.label}
-                          </span>
-                        </div>
-                      )}
-                    </div>
-                  </div>
+              <div key={`desktop-col-${colIndex}`} className="flex flex-col gap-6 w-1/2">
+                {mediaItems.filter((_, i) => i % 2 === colIndex).map((item, originalIndex) => (
+                  <MediaCard key={`desktop-${colIndex}-${originalIndex}`} item={item} />
                 ))}
               </div>
             ))}
