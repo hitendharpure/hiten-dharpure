@@ -12,9 +12,11 @@ import WeatherJourneyPage from './components/WeatherJourneyPage';
 import RobotJourneyPage from './components/RobotJourneyPage';
 import RobotArmJourneyPage from './components/RobotArmJourneyPage';
 import RobotArmMediaPage from './components/RobotArmMediaPage';
+import WeatherMediaPage from './components/WeatherMediaPage';
+import RobotMediaPage from './components/RobotMediaPage';
 
 export default function App() {
-  const [currentView, setCurrentView] = useState<'home' | 'maker' | 'weather-journey' | 'robot-journey' | 'robot-arm-journey' | 'robot-arm-media'>('home');
+  const [currentView, setCurrentView] = useState<'home' | 'maker' | 'weather-journey' | 'robot-journey' | 'robot-arm-journey' | 'robot-arm-media' | 'weather-media' | 'robot-media'>('home');
 
   useEffect(() => {
     const handleHashChange = () => {
@@ -29,6 +31,10 @@ export default function App() {
         setCurrentView('robot-arm-journey');
       } else if (hash === '#/robot-arm-media') {
         setCurrentView('robot-arm-media');
+      } else if (hash === '#/weather-media') {
+        setCurrentView('weather-media');
+      } else if (hash === '#/robot-media') {
+        setCurrentView('robot-media');
       } else {
         setCurrentView('home');
       }
@@ -45,7 +51,7 @@ export default function App() {
     window.scrollTo(0, 0);
   }, [currentView]);
 
-  const navigateTo = (view: 'home' | 'maker' | 'weather-journey' | 'robot-journey' | 'robot-arm-journey' | 'robot-arm-media') => {
+  const navigateTo = (view: 'home' | 'maker' | 'weather-journey' | 'robot-journey' | 'robot-arm-journey' | 'robot-arm-media' | 'weather-media' | 'robot-media') => {
     if (view === 'maker') {
       window.location.hash = '#/maker';
     } else if (view === 'weather-journey') {
@@ -56,6 +62,10 @@ export default function App() {
       window.location.hash = '#/robot-arm-journey';
     } else if (view === 'robot-arm-media') {
       window.location.hash = '#/robot-arm-media';
+    } else if (view === 'weather-media') {
+      window.location.hash = '#/weather-media';
+    } else if (view === 'robot-media') {
+      window.location.hash = '#/robot-media';
     } else {
       window.location.hash = '#/';
     }
@@ -83,7 +93,7 @@ export default function App() {
       {/* Actual content above canvas */}
       <div className="relative z-0 flex flex-col w-full min-h-screen overflow-x-hidden">
         <Navigation
-          currentView={(currentView === 'weather-journey' || currentView === 'robot-journey' || currentView === 'robot-arm-journey' || currentView === 'robot-arm-media') ? 'home' : currentView}
+          currentView={(currentView === 'weather-journey' || currentView === 'robot-journey' || currentView === 'robot-arm-journey' || currentView === 'robot-arm-media' || currentView === 'weather-media' || currentView === 'robot-media') ? 'home' : currentView}
           onViewChange={navigateTo}
         />
         <main className="flex-1 flex flex-col px-4 md:px-8 pb-16 lg:pb-24 gap-6 max-w-[1280px] w-full mx-auto justify-center">
@@ -102,8 +112,12 @@ export default function App() {
             <RobotJourneyPage onBack={() => navigateTo('home')} />
           ) : currentView === 'robot-arm-journey' ? (
             <RobotArmJourneyPage onBack={() => navigateTo('home')} />
-          ) : (
+          ) : currentView === 'robot-arm-media' ? (
             <RobotArmMediaPage onBack={() => navigateTo('home')} />
+          ) : currentView === 'weather-media' ? (
+            <WeatherMediaPage onBack={() => navigateTo('home')} />
+          ) : (
+            <RobotMediaPage onBack={() => navigateTo('home')} />
           )}
         </main>
       </div>
