@@ -8,7 +8,7 @@ export default function Hero() {
             Hiten <br className="hidden md:block" />Dharpure
           </h1>
           <p className="text-wonder-blue text-lg md:text-2xl font-semibold tracking-wide">
-            Innovator, Developer
+            Innovator & Developer
           </p>
         </div>
         <p className="text-gray-400 text-sm max-w-sm mt-2 md:mt-0 leading-relaxed">
