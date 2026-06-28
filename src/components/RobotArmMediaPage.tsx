@@ -140,6 +140,36 @@ export default function RobotArmMediaPage({ onBack }: RobotArmMediaPageProps) {
       aspect: 'aspect-[16/9]',
       link: 'https://thelivenagpur.com/2026/06/24/nagpur-student-hiten-dharpure-sets-guinness-world-record-for-worlds-smallest-robotic-arm/',
       linkText: 'Article'
+    },
+    {
+      type: 'image',
+      src: './2nd-gwr-sra/media/13.jpg',
+      label: 'Navarashtra - 28th June 2026',
+      aspect: 'aspect-[1/1]',
+    },
+    {
+      type: 'image',
+      src: './2nd-gwr-sra/media/14.jpg',
+      label: 'Deshonnati - 28th June 2026',
+      aspect: 'aspect-[9/21]',
+    },
+    {
+      type: 'image',
+      src: './2nd-gwr-sra/media/15.jpg',
+      label: 'Divya Watan - 28th June 2026',
+      aspect: 'aspect-[3/4]',
+    },
+    {
+      type: 'image',
+      src: './2nd-gwr-sra/media/16.jpg',
+      label: 'Vidarbha Ki Baat - 28th June 2026',
+      aspect: 'aspect-[9/16]',
+    },
+    {
+      type: 'image',
+      src: './2nd-gwr-sra/media/17.jpg',
+      label: 'School Poster - Standee',
+      aspect: 'aspect-[1/2]',
     }
   ];
 

@@ -137,7 +137,7 @@ export default function MakerPage() {
                   I’m the creator of <span className="text-white font-semibold">HastaVaani</span>, an offline Indian Sign Language (ISL) translation app, developed to bridge communication gaps for the deaf community. This project, built entirely from scratch - from design to deployment - reflects my belief that technology should empower everyone.
                 </p>
                 <p>
-                  I hold a <span className="text-white font-semibold">World Record</span> for developing a synchronized robotic dance sequence performance with self-created 3D-printed robots - a blend of creativity, engineering, and code. I have been felicitated twice by Union Minister Nitin Gadkari and also hold a published patent for an innovative advanced traffic signal system.
+                  I hold a <span className="text-white font-semibold">Two Guinness World Records</span> for Smallest Weather Station and Smallest Robot Arm with a World Record for developing a synchronized robotic dance sequence performance with self-created 3D-printed robots - a blend of creativity, engineering, and code. I have been felicitated thrice by Union Minister Nitin Gadkari.
                 </p>
 
                 <div className="pt-2 space-y-3">
