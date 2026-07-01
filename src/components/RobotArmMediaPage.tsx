@@ -56,6 +56,12 @@ export default function RobotArmMediaPage({ onBack }: RobotArmMediaPageProps) {
   const mediaItems: { type: 'video' | 'image'; src: string; label: string; aspect: string; link?: string; linkText?: string }[] = [
     {
       type: 'image',
+      src: './2nd-gwr-sra/media/1-a.jpg',
+      label: 'Lokmat - 29th June 2026',
+      aspect: 'aspect-[3/4]',
+    },
+    {
+      type: 'image',
       src: './2nd-gwr-sra/media/1.jpg',
       label: 'Dainik Bhaskar - 25th June 2026',
       aspect: 'aspect-[3/4]',
@@ -108,6 +114,7 @@ export default function RobotArmMediaPage({ onBack }: RobotArmMediaPageProps) {
       label: 'Lokvahini Interview',
       aspect: 'aspect-[16/9]',
       link: 'https://youtu.be/D589Rb-NzJE',
+      linkText: 'YT Link ➔'
     },
     {
       type: 'image',
@@ -170,6 +177,14 @@ export default function RobotArmMediaPage({ onBack }: RobotArmMediaPageProps) {
       src: './2nd-gwr-sra/media/17.jpg',
       label: 'School Poster - Standee',
       aspect: 'aspect-[1/2]',
+    },
+    {
+      type: 'video',
+      src: './2nd-gwr-sra/media/VBK Interview.mp4',
+      label: 'VBK Interview',
+      aspect: 'aspect-[16/9]',
+      link: 'https://www.facebook.com/share/v/1DoWEZQk4b/',
+      linkText: 'FB Link ➔'
     }
   ];
 
