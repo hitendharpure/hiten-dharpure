@@ -110,6 +110,38 @@ export default function RobotArmMediaPage({ onBack }: RobotArmMediaPageProps) {
     },
     {
       type: 'video',
+      src: './2nd-gwr-sra/media/nagpursamay-insta.mp4',
+      label: 'Nagpur Samay - 2nd July 2026',
+      aspect: 'aspect-[9/16]',
+      link: 'https://www.instagram.com/reel/DaSoEbDoRvt/',
+      linkText: 'IG Link ➔'
+    },
+    {
+      type: 'video',
+      src: './2nd-gwr-sra/media/VBK Interview.mp4',
+      label: 'VBK Interview',
+      aspect: 'aspect-[16/9]',
+      link: 'https://www.facebook.com/share/v/1DoWEZQk4b/',
+      linkText: 'FB Link ➔'
+    },
+    {
+      type: 'video',
+      src: './2nd-gwr-sra/media/ddsahyadri-interview.mp4',
+      label: 'DD Sahyadri - 1st July 2026',
+      aspect: 'aspect-[16/9]',
+      link: 'https://www.youtube.com/live/Lq56vHoohKk?si=d1n5-1_AxAxxQEB2&t=180',
+      linkText: 'YT Link ➔'
+    },
+    {
+      type: 'video',
+      src: './2nd-gwr-sra/media/lokmat-interview.mp4',
+      label: 'Lokmat Interview - 3rd July 2026',
+      aspect: 'aspect-[16/9]',
+      link: 'https://www.facebook.com/share/v/18qZ1Dr7AT/',
+      linkText: 'FB Link ➔'
+    },
+    {
+      type: 'video',
       src: './2nd-gwr-sra/media/Lokvahini-Interview.mp4',
       label: 'Lokvahini Interview',
       aspect: 'aspect-[16/9]',
@@ -179,12 +211,12 @@ export default function RobotArmMediaPage({ onBack }: RobotArmMediaPageProps) {
       aspect: 'aspect-[1/2]',
     },
     {
-      type: 'video',
-      src: './2nd-gwr-sra/media/VBK Interview.mp4',
-      label: 'VBK Interview',
+      type: 'image',
+      src: './2nd-gwr-sra/media/mahatimes-web.png',
+      label: 'Maharashtra Times - Web',
       aspect: 'aspect-[16/9]',
-      link: 'https://www.facebook.com/share/v/1DoWEZQk4b/',
-      linkText: 'FB Link ➔'
+      link: 'https://maharashtratimes.com/maharashtra/nagpur/17-year-old-hiten-dharpure-breaks-guinness-world-record-by-developing-the-smallest-robotic-arm/articleshow/132136468.cms',
+      linkText: 'Article ➔'
     }
   ];
 
