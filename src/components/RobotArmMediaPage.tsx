@@ -118,6 +118,14 @@ export default function RobotArmMediaPage({ onBack }: RobotArmMediaPageProps) {
     },
     {
       type: 'video',
+      src: './2nd-gwr-sra/media/ians.mp4',
+      label: 'IANS - X',
+      aspect: 'aspect-[9/16]',
+      link: 'https://x.com/ians_india/status/2075496788312871320',
+      linkText: 'X Link ➔'
+    },
+    {
+      type: 'video',
       src: './2nd-gwr-sra/media/VBK Interview.mp4',
       label: 'VBK Interview',
       aspect: 'aspect-[16/9]',
@@ -147,6 +155,22 @@ export default function RobotArmMediaPage({ onBack }: RobotArmMediaPageProps) {
       aspect: 'aspect-[16/9]',
       link: 'https://youtu.be/D589Rb-NzJE',
       linkText: 'YT Link ➔'
+    },
+    {
+      type: 'image',
+      src: './2nd-gwr-sra/media/Moneycontrol - web.png',
+      label: 'Moneycontrol - Web',
+      aspect: 'aspect-[16/9]',
+      link: 'https://www.moneycontrol.com/education/a-17-year-old-from-nagpur-sets-a-guinness-world-record-for-creating-world-s-smallest-functional-robotic-arm-article-13971069.html',
+      linkText: 'Article ➔'
+    },
+    {
+      type: 'image',
+      src: './2nd-gwr-sra/media/Jagran Josh - Web.png',
+      label: 'Jagran Josh - Web',
+      aspect: 'aspect-[16/9]',
+      link: 'https://www.jagranjosh.com/general-knowledge/who-is-hiten-dharpure-1820010485-1',
+      linkText: 'Article ➔'
     },
     {
       type: 'image',
