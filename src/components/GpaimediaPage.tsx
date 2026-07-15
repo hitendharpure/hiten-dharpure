@@ -45,7 +45,7 @@ export default function GpaimediaPage({ onBack }: GpaimediaPageProps) {
           className="flex items-center gap-2 text-xs font-bold text-gray-400 hover:text-wonder-green transition-colors cursor-pointer self-start group focus:outline-none"
         >
           <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-          Back to Portfolio
+          Back to Main Page
         </button>
 
         <div className="flex items-center gap-2 text-wonder-green">

@@ -8,13 +8,7 @@ interface AllMediaPageProps {
 
 export default function AllMediaPage({ onViewChange, onBack }: AllMediaPageProps) {
   const mediaCategories = [
-    {
-      id: 'pdf',
-      title: 'View all in PDF',
-      icon: <FileText className="w-5 h-5 text-lotus-pink" />,
-      type: 'link',
-      href: './mediacoverage.pdf'
-    },
+
     {
       id: 'robot-arm-media',
       title: 'Smallest Robot Arm',
@@ -61,13 +55,13 @@ export default function AllMediaPage({ onViewChange, onBack }: AllMediaPageProps
           className="flex items-center gap-2 text-xs font-bold text-gray-400 hover:text-wonder-green transition-colors cursor-pointer self-start group focus:outline-none"
         >
           <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-          Back to Portfolio
+          Back to Main Page
         </button>
 
         <h1 className="text-3xl md:text-4xl font-black text-white leading-tight tracking-tight">
           Media Coverage Hub
         </h1>
-        <p className="text-gray-400 text-sm">Select a project to view its specific media coverage, or view the comprehensive PDF.</p>
+        <p className="text-gray-400 text-sm">Select a project to view its specific media coverage.</p>
       </div>
 
       <div className="flex flex-col gap-4">
