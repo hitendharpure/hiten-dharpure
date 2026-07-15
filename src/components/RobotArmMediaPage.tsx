@@ -56,6 +56,24 @@ export default function RobotArmMediaPage({ onBack }: RobotArmMediaPageProps) {
   const mediaItems: { type: 'video' | 'image'; src: string; label: string; aspect: string; link?: string; linkText?: string }[] = [
     {
       type: 'image',
+      src: './2nd-gwr-sra/media/toi-1.jpg',
+      label: 'The Times of India - 13th July 2026 (Front Page)',
+      aspect: 'aspect-[6/5]',
+    },
+    {
+      type: 'image',
+      src: './2nd-gwr-sra/media/toi-2.jpg',
+      label: 'The Times of India - 13th July 2026 (Next Page)',
+      aspect: 'aspect-[1/2]',
+    },
+    {
+      type: 'image',
+      src: './2nd-gwr-sra/media/hitavada.jpg',
+      label: 'The Hitavada - 13th July 2026',
+      aspect: 'aspect-[4/3]',
+    },
+    {
+      type: 'image',
       src: './2nd-gwr-sra/media/1-a.jpg',
       label: 'Lokmat - 29th June 2026',
       aspect: 'aspect-[3/4]',
@@ -71,6 +89,12 @@ export default function RobotArmMediaPage({ onBack }: RobotArmMediaPageProps) {
       src: './2nd-gwr-sra/media/2.jpg',
       label: 'Sakal - 25th June 2026',
       aspect: 'aspect-[4/9]',
+    },
+    {
+      type: 'image',
+      src: './2nd-gwr-sra/media/lokmatsamachar-newpaper.jpg',
+      label: 'Lokmat Samachar - 15th July 2026',
+      aspect: 'aspect-[2/1]',
     },
     {
       type: 'image',
@@ -155,6 +179,46 @@ export default function RobotArmMediaPage({ onBack }: RobotArmMediaPageProps) {
       aspect: 'aspect-[16/9]',
       link: 'https://youtu.be/D589Rb-NzJE',
       linkText: 'YT Link ➔'
+    },
+    {
+      type: 'image',
+      src: './2nd-gwr-sra/media/indiatoday.png',
+      label: 'India Today - Web',
+      aspect: 'aspect-[16/9]',
+      link: 'https://www.indiatoday.in/education-today/news/story/meet-17-year-old-hiten-dharpure-guinness-world-record-holder-for-worlds-smallest-robotic-arm-2946085-2026-07-12',
+      linkText: 'Article ➔'
+    },
+    {
+      type: 'image',
+      src: './2nd-gwr-sra/media/toi-web.png',
+      label: 'The Times of India - Web',
+      aspect: 'aspect-[16/9]',
+      link: 'https://timesofindia.indiatimes.com/city/nagpur/nagpur-teen-innovators-tiny-robotic-arm-earns-him-third-consecutive-guinness-world-record/articleshow/132351645.cms',
+      linkText: 'Article ➔'
+    },
+    {
+      type: 'image',
+      src: './2nd-gwr-sra/media/ndtv.png',
+      label: 'NDTV - Web',
+      aspect: 'aspect-[16/9]',
+      link: 'https://www.ndtv.com/education/meet-hiten-dharpure-17-year-old-behind-the-worlds-smallest-robotic-arm-11762928',
+      linkText: 'Article ➔'
+    },
+    {
+      type: 'image',
+      src: './2nd-gwr-sra/media/ndtv-hindi.png',
+      label: 'NDTV - Hindi (Web)',
+      aspect: 'aspect-[16/9]',
+      link: 'https://ndtv.in/education/hiten-dharpure-smallest-robotic-arm-half-size-finger-guinness-world-record-nagpur-11763054',
+      linkText: 'Article ➔'
+    },
+    {
+      type: 'image',
+      src: './2nd-gwr-sra/media/gujaratsamachar.png',
+      label: 'Gujarat Samachar - Web',
+      aspect: 'aspect-[16/9]',
+      link: 'https://www.gujaratsamachar.com/news/national/17-year-old-from-nagpur-does-what-no-one-else-can-do-gets-a-place-in-guinness-book-of-world-records-19014884885',
+      linkText: 'Article ➔'
     },
     {
       type: 'image',
@@ -302,15 +366,13 @@ export default function RobotArmMediaPage({ onBack }: RobotArmMediaPageProps) {
           </div>
 
           {/* Desktop Layout (Masonry) */}
-          <div className="hidden md:flex flex-row gap-6 w-full">
+          <div className="hidden md:block columns-2 gap-6 w-full">
             {mediaItems.length === 0 && (
               <p className="text-sm text-gray-400 w-full">Media coming soon...</p>
             )}
-            {[0, 1].map((colIndex) => (
-              <div key={`desktop-col-${colIndex}`} className="flex flex-col gap-6 w-1/2">
-                {mediaItems.filter((_, i) => i % 2 === colIndex).map((item, originalIndex) => (
-                  <MediaCard key={`desktop-${colIndex}-${originalIndex}`} item={item} />
-                ))}
+            {mediaItems.map((item, index) => (
+              <div key={`desktop-${index}`} className="break-inside-avoid mb-6">
+                <MediaCard item={item} />
               </div>
             ))}
           </div>
