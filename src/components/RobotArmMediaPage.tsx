@@ -294,6 +294,12 @@ export default function RobotArmMediaPage({ onBack }: RobotArmMediaPageProps) {
     },
     {
       type: 'image',
+      src: './2nd-gwr-sra/media/desh.jpeg',
+      label: 'DESHONNATI - 5TH JULY 2026',
+      aspect: 'aspect-[16/9]',
+    },
+    {
+      type: 'image',
       src: './2nd-gwr-sra/media/17.jpg',
       label: 'School Poster - Standee',
       aspect: 'aspect-[1/2]',
