@@ -181,6 +181,22 @@ export default function RobotArmMediaPage({ onBack }: RobotArmMediaPageProps) {
       linkText: 'YT Link ➔'
     },
     {
+      type: 'video',
+      src: './2nd-gwr-sra/media/mumbai-news.mp4',
+      label: 'Mumbai News',
+      aspect: 'aspect-[16/9]',
+      link: 'https://youtu.be/Kb5ZVT1kZPw',
+      linkText: 'YT Link ➔'
+    },
+    {
+      type: 'image',
+      src: './2nd-gwr-sra/media/gwr-news.png',
+      label: 'Guinness World Records - News',
+      aspect: 'aspect-[16/9]',
+      link: 'https://www.guinnessworldrecords.com/news/2026/7/teenage-engineer-builds-worlds-smallest-robot-arm-his-second-recordbreaking-creation',
+      linkText: 'Article ➔'
+    },
+    {
       type: 'image',
       src: './2nd-gwr-sra/media/indiatoday.png',
       label: 'India Today - Web',
