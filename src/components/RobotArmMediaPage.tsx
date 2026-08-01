@@ -254,11 +254,19 @@ export default function RobotArmMediaPage({ onBack }: RobotArmMediaPageProps) {
     },
     {
       type: 'image',
+      src: './2nd-gwr-sra/media/yim.png',
+      label: 'Youth Incorporated Magazine - Web',
+      aspect: 'aspect-[16/9]',
+      link: 'https://youthincmag.com/hiten-dharpure-ai-robotics-real-world-problem-solving',
+      linkText: 'Article ➔'
+    },
+    {
+      type: 'image',
       src: './2nd-gwr-sra/media/10.png',
       label: 'United News of india - Web',
       aspect: 'aspect-[16/9]',
       link: 'https://www.uniindia.com/nagpur-student-sets-guinness-world-record-with-world-s-smallest-robotic-arm/west/news/3886803.html',
-      linkText: 'Article'
+      linkText: 'Article ➔'
     },
     {
       type: 'image',
@@ -266,7 +274,7 @@ export default function RobotArmMediaPage({ onBack }: RobotArmMediaPageProps) {
       label: 'DailyHunt - Web',
       aspect: 'aspect-[16/9]',
       link: 'https://m.dailyhunt.in/news/india/marathi/tarun+bharat+nagpur-epaper-tarnbhat/hiten+dharapurecha+jagatik+vikram-newsid-n717203342',
-      linkText: 'Article'
+      linkText: 'Article ➔'
     },
     {
       type: 'image',
@@ -274,7 +282,7 @@ export default function RobotArmMediaPage({ onBack }: RobotArmMediaPageProps) {
       label: 'Tarun Bharat - Web',
       aspect: 'aspect-[16/9]',
       link: 'https://www.tarunbharat.net/Encyc/2026/6/24/hiten-dharpure-world-record.html',
-      linkText: 'Article'
+      linkText: 'Article ➔'
     },
     {
       type: 'image',
@@ -282,7 +290,7 @@ export default function RobotArmMediaPage({ onBack }: RobotArmMediaPageProps) {
       label: 'The Live Nagpur - Web',
       aspect: 'aspect-[16/9]',
       link: 'https://thelivenagpur.com/2026/06/24/nagpur-student-hiten-dharpure-sets-guinness-world-record-for-worlds-smallest-robotic-arm/',
-      linkText: 'Article'
+      linkText: 'Article ➔'
     },
     {
       type: 'image',
