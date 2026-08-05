@@ -198,6 +198,14 @@ export default function RobotArmMediaPage({ onBack }: RobotArmMediaPageProps) {
     },
     {
       type: 'image',
+      src: './2nd-gwr-sra/media/gwr-news-kids.png',
+      label: 'Guinness World Records (Kids) - News',
+      aspect: 'aspect-[16/9]',
+      link: 'https://kids.guinnessworldrecords.com/news/2026/8/this-teenage-engineer-built-the-worlds-smallest-robot-arm',
+      linkText: 'Article ➔'
+    },
+    {
+      type: 'image',
       src: './2nd-gwr-sra/media/indiatoday.png',
       label: 'India Today - Web',
       aspect: 'aspect-[16/9]',
@@ -210,6 +218,14 @@ export default function RobotArmMediaPage({ onBack }: RobotArmMediaPageProps) {
       label: 'The Times of India - Web',
       aspect: 'aspect-[16/9]',
       link: 'https://timesofindia.indiatimes.com/city/nagpur/nagpur-teen-innovators-tiny-robotic-arm-earns-him-third-consecutive-guinness-world-record/articleshow/132351645.cms',
+      linkText: 'Article ➔'
+    },
+    {
+      type: 'image',
+      src: './2nd-gwr-sra/media/toi-2.png',
+      label: 'The Times of India (Edu) - Web',
+      aspect: 'aspect-[16/9]',
+      link: 'https://timesofindia.indiatimes.com/education/news/from-a-home-lab-to-two-guinness-world-records-how-17-year-old-hiten-dharpure-is-shrinking-the-future-of-robotics/articleshow/132858328.cms',
       linkText: 'Article ➔'
     },
     {
