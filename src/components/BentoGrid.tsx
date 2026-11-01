@@ -27,7 +27,7 @@ const MediaPlaceholder = ({ type = 'photo', className = '', label = 'MEDIA', src
 );
 
 interface BentoGridProps {
-  onViewChange: (view: 'home' | 'maker' | 'weather-journey' | 'robot-journey' | 'robot-arm-journey' | 'robot-arm-media' | 'weather-media' | 'robot-media' | 'gpai-media' | 'ibr-media') => void;
+  onViewChange: (view: 'home' | 'maker' | 'weather-journey' | 'robot-journey' | 'robot-arm-journey' | 'robot-arm-media' | 'weather-media' | 'robot-media' | 'gpai-media' | 'ibr-media' | 'netra-setu') => void;
 }
 
 export default function BentoGrid({ onViewChange }: BentoGridProps) {
@@ -58,6 +58,27 @@ export default function BentoGrid({ onViewChange }: BentoGridProps) {
             </div>
           </div>
 
+        </motion.div>
+
+        {/* Netra Setu Project - below Academic Foundation */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: "easeOut", delay: 0.12 }}
+          onClick={() => onViewChange('netra-setu')}
+          className="w-full max-w-3xl mx-auto xl:mx-0 xl:absolute xl:right-full xl:mr-6 xl:top-[220px] xl:w-[320px] xl:max-w-none xl:h-fit bg-slate-900/40 backdrop-blur-md border border-slate-800/65 rounded-2xl p-5 flex flex-col gap-3 hover:scale-[1.02] hover:shadow-2xl hover:border-wonder-green/40 transition-all cursor-pointer group"
+        >
+          <div className="flex items-center gap-2 text-wonder-green">
+            <Cpu className="w-4 h-4" />
+            <h3 className="text-xs font-bold uppercase tracking-widest">Project</h3>
+          </div>
+          <p className="text-lg font-bold text-gray-100 group-hover:text-wonder-green transition-colors">Netra Setu</p>
+          <p className="text-xs text-gray-400 leading-relaxed">
+            Autonomous offline Braille reader — bridging vision to touch with embedded AI.
+          </p>
+          <span className="text-[10px] font-bold text-wonder-green/70 uppercase tracking-wider mt-1 group-hover:text-wonder-green transition-colors">
+            View Project ➔
+          </span>
         </motion.div>
 
         {/* World Record 2026 */}

@@ -17,9 +17,10 @@ import RobotMediaPage from './components/RobotMediaPage';
 import GpaimediaPage from './components/GpaimediaPage';
 import IbrmediaPage from './components/IbrmediaPage';
 import AllMediaPage from './components/AllMediaPage';
+import NetraSetuPage from './components/NetraSetuPage';
 
 export default function App() {
-  const [currentView, setCurrentView] = useState<'home' | 'maker' | 'weather-journey' | 'robot-journey' | 'robot-arm-journey' | 'robot-arm-media' | 'weather-media' | 'robot-media' | 'gpai-media' | 'ibr-media' | 'all-media'>('home');
+  const [currentView, setCurrentView] = useState<'home' | 'maker' | 'weather-journey' | 'robot-journey' | 'robot-arm-journey' | 'robot-arm-media' | 'weather-media' | 'robot-media' | 'gpai-media' | 'ibr-media' | 'all-media' | 'netra-setu'>('home');
 
   useEffect(() => {
     const handleHashChange = () => {
@@ -44,6 +45,8 @@ export default function App() {
         setCurrentView('ibr-media');
       } else if (hash === '#/all-media') {
         setCurrentView('all-media');
+      } else if (hash === '#/netra-setu') {
+        setCurrentView('netra-setu');
       } else {
         setCurrentView('home');
       }
@@ -60,7 +63,7 @@ export default function App() {
     window.scrollTo(0, 0);
   }, [currentView]);
 
-  const navigateTo = (view: 'home' | 'maker' | 'weather-journey' | 'robot-journey' | 'robot-arm-journey' | 'robot-arm-media' | 'weather-media' | 'robot-media' | 'gpai-media' | 'ibr-media' | 'all-media') => {
+  const navigateTo = (view: 'home' | 'maker' | 'weather-journey' | 'robot-journey' | 'robot-arm-journey' | 'robot-arm-media' | 'weather-media' | 'robot-media' | 'gpai-media' | 'ibr-media' | 'all-media' | 'netra-setu') => {
     if (view === 'maker') {
       window.location.hash = '#/maker';
     } else if (view === 'weather-journey') {
@@ -81,6 +84,8 @@ export default function App() {
       window.location.hash = '#/ibr-media';
     } else if (view === 'all-media') {
       window.location.hash = '#/all-media';
+    } else if (view === 'netra-setu') {
+      window.location.hash = '#/netra-setu';
     } else {
       window.location.hash = '#/';
     }
@@ -108,7 +113,7 @@ export default function App() {
       {/* Actual content above canvas */}
       <div className="relative z-0 flex flex-col w-full min-h-screen overflow-x-hidden">
         <Navigation
-          currentView={(currentView === 'weather-journey' || currentView === 'robot-journey' || currentView === 'robot-arm-journey' || currentView === 'robot-arm-media' || currentView === 'weather-media' || currentView === 'robot-media' || currentView === 'gpai-media' || currentView === 'ibr-media' || currentView === 'all-media') ? 'home' : currentView}
+          currentView={(currentView === 'weather-journey' || currentView === 'robot-journey' || currentView === 'robot-arm-journey' || currentView === 'robot-arm-media' || currentView === 'weather-media' || currentView === 'robot-media' || currentView === 'gpai-media' || currentView === 'ibr-media' || currentView === 'all-media' || currentView === 'netra-setu') ? 'home' : currentView}
           onViewChange={navigateTo as any}
         />
         <main className="flex-1 flex flex-col px-4 md:px-8 pb-16 lg:pb-24 gap-6 max-w-[1280px] w-full mx-auto justify-center">
@@ -137,6 +142,8 @@ export default function App() {
             <GpaimediaPage onBack={() => navigateTo('home')} />
           ) : currentView === 'ibr-media' ? (
             <IbrmediaPage onBack={() => navigateTo('home')} />
+          ) : currentView === 'netra-setu' ? (
+            <NetraSetuPage onBack={() => navigateTo('home')} />
           ) : (
             <AllMediaPage onViewChange={navigateTo as any} onBack={() => navigateTo('home')} />
           )}
